@@ -1,5 +1,5 @@
 <?php
-function sendPostRequest($url, $postData) {
+function CURL_POST($url, $postData) {
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -18,7 +18,7 @@ function sendPostRequest($url, $postData) {
     return $response;
 }
 
-function sendGetRequest($url) {
+function CURL_GET($url) {
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
