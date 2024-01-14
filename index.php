@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +12,7 @@
 	<meta property="og:description" content="Kripton : Crypto Admin Dashboard  Bootstrap 5 Template" />
 	<meta property="og:image" content="../xhtml/social-image.png"/>
 	<meta name="format-detection" content="telephone=no">
-    <title>kripton - Crypto Admin Dashboard </title>
+    <title>Admo </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
@@ -34,9 +33,7 @@
             <div class="sk-child sk-bounce3"></div>
         </div>
     </div>
-    <!--*******************
-        Preloader end
-    ********************-->
+    <!--********* Preloader End ******-->
 
     <!--*** Main wrapper start ***-->
        <div id="main-wrapper">
