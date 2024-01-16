@@ -63,8 +63,8 @@
 						<div class="card overflow-hidden">
 							<div class="card-header align-items-start border-0 pb-0">
 								<div class="me-auto">
-									<p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 me-2 text-success" aria-hidden="true"></i>4%(30 days)</p>
-									<h2 class="text-black mb-0 font-w600">$65,123</h2>
+									<p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 me-2 text-success" aria-hidden="true"></i>الإعلانات</p>
+									<h2 class="text-black mb-0 font-w600">2927</h2>
 								</div>
 								<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M28.5 16.5002C28.4986 14.844 27.156 13.5018 25.5003 13.5H16.5002V19.4999H25.5003C27.156 19.4985 28.4986 18.1559 28.5 16.5002Z" fill="#FFAB2D"/>
@@ -81,8 +81,8 @@
 						<div class="card overflow-hidden">
 							<div class="card-header align-items-start border-0 pb-0">
 								<div class="me-auto">
-									<p class="mb-2 fs-13"><i class="fa fa-caret-down scale5 me-2 text-danger" aria-hidden="true"></i>4%(30 days)</p>
-									<h2 class="text-black mb-0 font-w600">$65,123</h2>
+									<p class="mb-2 fs-13"><i class="fa fa-caret-down scale5 me-2 text-danger" aria-hidden="true"></i>المزادات</p>
+									<h2 class="text-black mb-0 font-w600">5297</h2>
 								</div>
 								<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M21 0.00012207C9.4021 0.00012207 9.15527e-05 9.40213 9.15527e-05 21C9.15527e-05 32.5979 9.4021 41.9999 21 41.9999C32.5979 41.9999 41.9999 32.5979 41.9999 21C41.9871 9.40762 32.5924 0.0129395 21 0.00012207ZM12.3281 19.4999H18.328C19.1566 19.4999 19.8281 20.1715 19.8281 21C19.8281 21.8286 19.1566 22.5001 18.328 22.5001H12.3281C11.4996 22.5001 10.828 21.8286 10.828 21C10.828 20.1715 11.5 19.4999 12.3281 19.4999ZM31.0841 17.3658L29.28 26.392C28.8552 28.4872 27.0155 29.9951 24.8777 30.0001H12.3281C11.4996 30.0001 10.828 29.3286 10.828 28.5C10.828 27.6715 11.5 26.9999 12.3281 26.9999H24.8777C25.5868 26.9981 26.197 26.4982 26.338 25.8033L28.1425 16.7772C28.3027 15.9715 27.7799 15.1887 26.9747 15.0285C26.8791 15.0097 26.782 15.0001 26.685 15.0001H15.3283C14.4998 15.0001 13.8282 14.3286 13.8282 13.5C13.8282 12.6715 14.4998 11.9999 15.3283 11.9999H26.685C29.1633 12.0009 31.1715 14.01 31.1711 16.4883C31.1711 16.7827 31.1418 17.0765 31.0841 17.3658Z" fill="#3693FF"/>
@@ -97,8 +97,8 @@
 						<div class="card overflow-hidden">
 							<div class="card-header align-items-start border-0 pb-0">
 								<div class="me-auto">
-									<p class="mb-2 fs-13"><i class="fa fa-caret-down scale5 me-2 text-danger" aria-hidden="true"></i>4%(30 days)</p>
-									<h2 class="text-black mb-0 font-w600">$65,123</h2>
+									<p class="mb-2 fs-13"><i class="fa fa-caret-down scale5 me-2 text-danger" aria-hidden="true"></i>الطلبات</p>
+									<h2 class="text-black mb-0 font-w600">598</h2>
 								</div>
 								<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M21 0.00012207C9.4021 0.00012207 9.15527e-05 9.40213 9.15527e-05 21C9.15527e-05 32.5979 9.4021 41.9999 21 41.9999C32.5979 41.9999 41.9999 32.5979 41.9999 21C41.9871 9.40762 32.5924 0.0129395 21 0.00012207ZM26.9999 30.0001H22.5001V34.4999C22.5001 35.3285 21.8286 36 21 36C20.1714 36 19.4999 35.3285 19.4999 34.4999V30.0001H15.0001C14.1715 30.0006 13.4995 29.3295 13.4991 28.5009C13.4991 28.1599 13.6149 27.8289 13.8282 27.5625L23.8784 15.0001H15.0001C14.1715 15.0001 13.5 14.3286 13.5 13.5C13.5 12.6715 14.1715 11.9999 15.0001 11.9999H19.4999V7.50012C19.4999 6.67157 20.1714 6.00003 21 6.00003C21.8286 6.00003 22.5001 6.67203 22.5001 7.50012V11.9999H26.9999C27.8294 12.0013 28.5005 12.6747 28.4995 13.5037C28.4991 13.8429 28.3833 14.1725 28.1718 14.4375L18.1216 26.9999H26.9999C27.8285 26.9999 28.5 27.6719 28.5 28.5C28.5 29.3286 27.8285 30.0001 26.9999 30.0001Z" fill="#5B5D81"/>
@@ -113,8 +113,8 @@
 						<div class="card overflow-hidden">
 							<div class="card-header align-items-start border-0 pb-0">
 								<div class="me-auto">
-									<p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 me-2 text-success" aria-hidden="true"></i>4%(30 days)</p>
-									<h2 class="text-black mb-0 font-w600">$65,123</h2>
+									<p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 me-2 text-success" aria-hidden="true"></i>المستخدمين</p>
+									<h2 class="text-black mb-0 font-w600">123</h2>
 								</div>
 								<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M21.5566 23.893C21.1991 24.0359 20.8009 24.0359 20.4434 23.893L16.6064 22.3582L21 31.1454L25.3936 22.3582L21.5566 23.893Z" fill="#AC4CBC"/>
@@ -127,96 +127,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-6 col-xxl-12">
-						<div class="card">
-							<div class="card-header d-block d-sm-flex border-0">
-								<div>
-									<h4 class="fs-20 text-black">Market Overview</h4>
-									<p class="mb-0 fs-12">Lorem ipsum dolor sit amet, consectetur</p>
-								</div>
-								<div class="card-action card-tabs mt-3 mt-sm-0">
-									<ul class="nav nav-tabs" role="tablist">
-										<li class="nav-item">
-											<a class="nav-link" data-bs-toggle="tab" href="#Week" role="tab">
-												Week	
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link active" data-bs-toggle="tab" href="#Month" role="tab">
-												Month
-											</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" data-bs-toggle="tab" href="#Year" role="tab">
-												Year
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-body pb-0 pt-sm-3 pt-0 tab-content">
-								<div class="tab-pane fade active show" id="Month">
-									<div class="row">
-										<div class="d-flex col-6 align-items-center">
-											<div class="fs-18 font-w600 me-3">
-												<span class="text-success pe-3">BUY</span>
-												<span class="text-black pe-3">$5,673</span>
-											</div>
-											<div class="fs-18 font-w600 ms-auto">
-												<span class="text-danger pe-3">SELL</span>
-												<span class="text-black pe-3">$5,982</span>
-											</div>
-										</div>
-										<div class="col-6 text-start">
-											<a href="javascript:void(0);" class="btn btn-primary light btn-rounded"><i class="las la-download scale5 me-2"></i>Get Report</a>
-										</div>
-									</div>
-									<div id="chartBarRunning" class="bar-chart"></div>
-								</div>
-								<div class="tab-pane fade" id="Week">
-									<div class="row">
-										<div class="d-flex col-6 align-items-center">
-											<div class="fs-18 font-w600 me-3">
-												<span class="text-success pe-3">BUY</span>
-												<span class="text-black pe-3">$3,472</span>
-											</div>
-											<div class="fs-18 font-w600 ms-auto">
-												<span class="text-danger pe-3">SELL</span>
-												<span class="text-black pe-3">$6,542</span>
-											</div>
-										</div>
-										<div class="col-6 text-start">
-											<a href="javascript:void(0);" class="btn btn-primary light btn-rounded"><i class="las la-download scale5 me-2"></i>Get Report</a>
-										</div>
-									</div>
-									<div id="chartBarRunning2" class="bar-chart"></div>
-								</div>
-								<div class="tab-pane fade" id="Year">
-									<div class="row">
-										<div class="d-flex col-6 align-items-center">
-											<div class="fs-18 font-w600 me-3">
-												<span class="text-success pe-3">BUY</span>
-												<span class="text-black pe-3">$1,343</span>
-											</div>
-											<div class="fs-18 font-w600 ms-auto">
-												<span class="text-danger pe-3">SELL</span>
-												<span class="text-black pe-3">$3,482</span>
-											</div>
-										</div>
-										<div class="col-6 text-start">
-											<a href="javascript:void(0);" class="btn btn-primary light btn-rounded"><i class="las la-download scale5 ms-2"></i>Get Report</a>
-										</div>
-									</div>
-									<div id="chartBarRunning3" class="bar-chart"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+
 					<div class="col-xl-6 col-xxl-12">
 						<div class="card">
 							<div class="card-header d-sm-flex d-block pb-0 border-0">
 								<div>
-									<h4 class="fs-20 text-black">Crypto Statistics</h4>
+									<h4 class="fs-20 text-black">إحصائيات الإعلانات</h4>
 									<p class="mb-0 fs-12">Lorem ipsum dolor sit amet, consectetur</p>
 								</div>
 								<div class="d-flex mt-sm-0 mt-3">
@@ -344,7 +260,7 @@
 							<div class="col-sm-6">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="mb-0 text-black fs-20">Sell Order</h4>
+										<h4 class="mb-0 text-black fs-20">طلبات الإيداع</h4>
                                         <div class="dropdown me-auto">
                                             <div class="btn-link" data-bs-toggle="dropdown">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
@@ -424,7 +340,7 @@
 							<div class="col-sm-6">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="mb-0 text-black fs-20">Buy Order</h4>
+									<h4 class="mb-0 text-black fs-20">طلبات السحب</h4>
 										<div class="dropdown me-auto">
                                             <div class="btn-link" data-bs-toggle="dropdown">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
