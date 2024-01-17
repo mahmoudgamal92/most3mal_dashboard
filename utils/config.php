@@ -4,6 +4,7 @@ define('DB_USER', 'username');
 define('DB_PASSWORD', 'password');
 define('DB_DATABASE', 'database_name');
 define('API_KEY', 'your_api_key');
-define('API_URL', 'https://api.example.com');
+define('API_URL', 'http://localhost/most3mal/api/api.php/');
 define('DEBUG_MODE', true);
-?>
+
+

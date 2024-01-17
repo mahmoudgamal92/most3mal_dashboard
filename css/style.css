@@ -68,11 +68,8 @@ $color_pallate_12: #3cba54;
 $color_pallate_13: #2a2a2a;
 $color_pallate_14: #4885ed;
 $color_pallate_15: #ed0b4c; */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
 @import url("../icons/simple-line-icons/css/simple-line-icons.css");
 @import url("../icons/font-awesome/css/all.min.css");
 @import url("../icons/material-design-iconic-font/css/materialdesignicons.min.css");
@@ -291,7 +288,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Roboto, sans-serif;
+  --bs-body-font-family: 'Cairo', sans-serif;;
   --bs-body-font-size: 0.875rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -523,7 +520,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Cairo', sans-serif;  
   font-size: inherit;
   line-height: inherit; }
 
@@ -4636,7 +4633,7 @@ textarea.form-control {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4724,7 +4721,7 @@ textarea.form-control {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -33224,16 +33221,17 @@ $color_pallate_15: #ed0b4c; */
   background-color: rgba(110, 110, 110, 0.1); }
 
 [data-typography="opensans"] {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Cairo', sans-serif; 
+}
 
 [data-typography="poppins"] {
-  font-family: 'poppins', sans-serif; }
+  font-family: 'Cairo', sans-serif; }
 
 [data-typography="roboto"] {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Cairo', sans-serif; }
 
 [data-typography="helvetica"] {
-  font-family: 'HelveticaNeue'; }
+  font-family: 'Cairo', sans-serif; }
 
 /* $color_pallate_1: $white;
 $color_pallate_2: #143b64;
@@ -34105,7 +34103,7 @@ $color_pallate_15: #ed0b4c; */
     box-shadow: none !important; }
 
 .fc-text-arrow {
-  font-family: inherit;
+  font-family: 'Cairo', sans-serif;
   font-size: 1rem; }
 
 .fc-event,
@@ -36194,7 +36192,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   background: #fff;
   padding: 0.3125rem;
   border-radius: 0.3125rem;
-  font-family: 'Roboto' !important;
+  font-family: 'Cairo', sans-serif !important;
   color: #363062;
   border: 1px solid rgba(54, 48, 98, 0.3); }
 
@@ -37133,7 +37131,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     color: #fff !important;
     border-color: #2a2833; }
   .accordion-header-indicator {
-    font-family: 'themify';
+    font-family: 'Cairo', sans-serif;
     position: absolute;
     right: 1.5625rem;
     top: 50%;
@@ -37205,7 +37203,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   position: absolute;
   right: auto;
   left: 1.5625rem;
-  font-family: 'themify'; }
+  font-family: 'Cairo', sans-serif; }
   [direction="rtl"] .accordion-with-icon .accordion-header-icon {
     left: auto;
     right: 1.5625rem; }
@@ -39533,7 +39531,7 @@ code {
 
 .multi-steps > li.is-active:before, .multi-steps > li.is-active ~ li:before {
   content: counter(stepNum);
-  font-family: inherit;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400; }
 
 .multi-steps > li.is-active:after, .multi-steps > li.is-active ~ li:after {
