@@ -1,7 +1,8 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
+$users = json_decode(CURL_GET(API_URL . 'records/payment_process?join=payment_process,users'), true);
+echo json_encode($users);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -16,6 +17,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
         <!--*** Nav header start ***-->
         <?php include 'include/nav_header.php'; ?>
         <!--*** Nav header end ****-->
+
+
 
         <!--***  Chat box start ***-->
         <?php include 'include/chatbox.php'; ?>
@@ -41,21 +44,21 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">الإعلانات </h4>
+                                <h4 class="card-title">طلبات الإيداع </h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>صورة الإعلان</th>
-                                                <th>رقم الإعلان</th>
-                                                <th>عنوان الإعلان</th>
-                                                <th>السعر</th>
-                                                <th>حالة الإعلان</th>
-                                                <th>العنوان</th>
-                                                <th>تاريخ العرض</th>
-                                                <th>الإجراءات</th>
+                                                <th>الترتيب</th>
+                                                <th>معرف العملية</th>
+                                                <th>النوع</th>
+                                                <th>الحالة</th>
+                                                <th>بوابة الدفع</th>
+                                                <th>قيمة العملية</th>
+                                                <th>العميل</th>
+                                                <th>تاريخ التسجيل</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -64,29 +67,26 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
                                             foreach ($users['records'] as $item) {
                                             ?>
                                                 <tr>
-                                                    <td>--</td>
-                                                    <td><?php echo $item['auction_number'] ?></td>
-                                                    <td><?php echo $item['title'] ?></td>
-                                                    <td><?php echo $item['duration'] ?></td>
+                                                    <td><?php echo $item['payment_id'] ?></td>
+                                                    <td><?php echo $item['payment_token'] ?></td>
+                                                    <td><?php echo $item['payment_type'] ?></td>
+                                                    <td><?php echo $item['payment_gateway'] ?></td>
+
                                                     <td>
                                                         <span class="badge light badge-success">
-                                                            <?php echo $item['status'] ?>
+                                                            <?php echo $item['payment_status'] ?>
                                                         </span>
                                                     </td>
-                                                    <td><?php echo $item['address'] ?></td>
-                                                    <td><?php echo $item['created_at'] ?></td>
                                                     <td>
-                                                        <div class="d-flex">
-
-                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a href="#" class="btn btn-danger shadow btn-xs sharp">
-                                                                <i class="fa fa-trash"></i>
-                                                            </a>
-                                                            <div>
+                                                        <?php echo $item['amount'] ?>
                                                     </td>
+
+                                                    <td>
+                                                        <?php echo $item['user_id'] ?>
+                                                    </td>
+
+                                                    <td><?php echo $item['created_at'] ?></td>
+
                                                 </tr>
                                             <?php
                                             }

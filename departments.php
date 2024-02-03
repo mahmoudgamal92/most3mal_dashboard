@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
+$users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -65,15 +65,18 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
                                             ?>
                                                 <tr>
                                                     <td>--</td>
-                                                    <td><?php echo $item['auction_number'] ?></td>
-                                                    <td><?php echo $item['title'] ?></td>
-                                                    <td><?php echo $item['duration'] ?></td>
+                                                    <td><?php echo $item['id'] ?></td>
+                                                    <td>
+                                                        <?php
+                                                        $obj = json_decode($item['name'], true);
+                                                        echo $obj['ar'];
+                                                        ?>
+                                                    </td>
                                                     <td>
                                                         <span class="badge light badge-success">
                                                             <?php echo $item['status'] ?>
                                                         </span>
                                                     </td>
-                                                    <td><?php echo $item['address'] ?></td>
                                                     <td><?php echo $item['created_at'] ?></td>
                                                     <td>
                                                         <div class="d-flex">

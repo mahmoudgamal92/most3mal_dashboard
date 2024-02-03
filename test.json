@@ -1,0 +1,414 @@
+{
+    "records": [
+        {
+            "payment_id": 3,
+            "payment_token": "07072782196171633773",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "163",
+            "created_at": "2023-09-26 12:26:14pm"
+        },
+        {
+            "payment_id": 4,
+            "payment_token": "07072782244171635072",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "163",
+            "created_at": "2023-09-26 01:11:07pm"
+        },
+        {
+            "payment_id": 5,
+            "payment_token": "none",
+            "payment_type": "withdraw",
+            "payment_status": "pending",
+            "payment_gateway": "none",
+            "amount": "450",
+            "user_id": "163",
+            "created_at": "Tue Sep 26 2023 22:27:46 GMT+0300"
+        },
+        {
+            "payment_id": 6,
+            "payment_token": "07072782284171638073",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "162",
+            "created_at": "2023-09-26 02:53:01pm"
+        },
+        {
+            "payment_id": 7,
+            "payment_token": "07072785765171706974",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "163",
+            "created_at": "2023-09-27 03:40:45am"
+        },
+        {
+            "payment_id": 8,
+            "payment_token": "07072787580171765974",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "",
+            "created_at": "2023-09-27 03:59:20pm"
+        },
+        {
+            "payment_id": 9,
+            "payment_token": "07072787582171766174",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "",
+            "created_at": "2023-09-27 04:01:00pm"
+        },
+        {
+            "payment_id": 10,
+            "payment_token": "none",
+            "payment_type": "withdraw",
+            "payment_status": "pending",
+            "payment_gateway": "none",
+            "amount": "200",
+            "user_id": "163",
+            "created_at": "Thu Sep 28 2023 01:01:33 GMT+0300"
+        },
+        {
+            "payment_id": 11,
+            "payment_token": "none",
+            "payment_type": "withdraw",
+            "payment_status": "pending",
+            "payment_gateway": "none",
+            "amount": "200",
+            "user_id": "163",
+            "created_at": "Thu Sep 28 2023 01:01:33 GMT+0300"
+        },
+        {
+            "payment_id": 12,
+            "payment_token": "07072831458172441572",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "170",
+            "created_at": "2023-10-07 04:00:00pm"
+        },
+        {
+            "payment_id": 13,
+            "payment_token": "07072831460172441672",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "170",
+            "created_at": "2023-10-07 04:09:25pm"
+        },
+        {
+            "payment_id": 14,
+            "payment_token": "07072858076173000071",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "201",
+            "created_at": "2023-10-13 07:15:20am"
+        },
+        {
+            "payment_id": 15,
+            "payment_token": "07072858103173001171",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "201",
+            "created_at": "2023-10-13 07:17:36am"
+        },
+        {
+            "payment_id": 16,
+            "payment_token": "none",
+            "payment_type": "withdraw",
+            "payment_status": "pending",
+            "payment_gateway": "none",
+            "amount": "100",
+            "user_id": "201",
+            "created_at": "Fri Oct 13 2023 16:18:51 GMT+0300"
+        },
+        {
+            "payment_id": 17,
+            "payment_token": "07072969209177066774",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "211",
+            "created_at": "2023-11-02 03:38:39am"
+        },
+        {
+            "payment_id": 18,
+            "payment_token": "07072969221177067373",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "211",
+            "created_at": "2023-11-02 03:40:51am"
+        },
+        {
+            "payment_id": 19,
+            "payment_token": "07072969237177068274",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "150",
+            "user_id": "211",
+            "created_at": "2023-11-02 03:44:02am"
+        },
+        {
+            "payment_id": 20,
+            "payment_token": "07072969245177068574",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "400",
+            "user_id": "211",
+            "created_at": "2023-11-02 03:46:08am"
+        },
+        {
+            "payment_id": 21,
+            "payment_token": "07072969308177071974",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "500",
+            "user_id": "211",
+            "created_at": "2023-11-02 03:59:22am"
+        },
+        {
+            "payment_id": 22,
+            "payment_token": "07072996101177678774",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "500",
+            "user_id": "214",
+            "created_at": "2023-11-08 03:12:40am"
+        },
+        {
+            "payment_id": 23,
+            "payment_token": "07072996120177679474",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "59788",
+            "user_id": "214",
+            "created_at": "2023-11-08 03:16:34am"
+        },
+        {
+            "payment_id": 24,
+            "payment_token": "none",
+            "payment_type": "withdraw",
+            "payment_status": "pending",
+            "payment_gateway": "none",
+            "amount": "500",
+            "user_id": "201",
+            "created_at": "Mon Nov 20 2023 15:06:29 GMT+0300"
+        },
+        {
+            "payment_id": 25,
+            "payment_token": "07073050874178950473",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "30000",
+            "user_id": "220",
+            "created_at": "2023-11-20 02:58:58pm"
+        },
+        {
+            "payment_id": 26,
+            "payment_token": "07073103314180162771",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "10000",
+            "user_id": "166",
+            "created_at": "2023-12-01 04:33:19pm"
+        },
+        {
+            "payment_id": 27,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "500",
+            "user_id": "170",
+            "created_at": "December 5, 2023, 12:47 am"
+        },
+        {
+            "payment_id": 28,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "500",
+            "user_id": "162",
+            "created_at": "December 5, 2023, 12:47 am"
+        },
+        {
+            "payment_id": 29,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "20.00",
+            "user_id": "162",
+            "created_at": "December 5, 2023, 1:32 am"
+        },
+        {
+            "payment_id": 30,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "20.00",
+            "user_id": "170",
+            "created_at": "December 5, 2023, 1:32 am"
+        },
+        {
+            "payment_id": 31,
+            "payment_token": "07073121063180585972",
+            "payment_type": "deposite",
+            "payment_status": "success",
+            "payment_gateway": "myfatoorah",
+            "amount": "100000",
+            "user_id": "201",
+            "created_at": "2023-12-05 05:59:43am"
+        },
+        {
+            "payment_id": 32,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "500",
+            "user_id": "166",
+            "created_at": "December 5, 2023, 11:14 am"
+        },
+        {
+            "payment_id": 33,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "500",
+            "user_id": "162",
+            "created_at": "December 5, 2023, 11:14 am"
+        },
+        {
+            "payment_id": 34,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "450.00",
+            "user_id": "170",
+            "created_at": "December 5, 2023, 11:22 am"
+        },
+        {
+            "payment_id": 35,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "450.00",
+            "user_id": "166",
+            "created_at": "December 5, 2023, 11:22 am"
+        },
+        {
+            "payment_id": 36,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "5685",
+            "user_id": "214",
+            "created_at": "December 11, 2023, 4:59 am"
+        },
+        {
+            "payment_id": 37,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "5685",
+            "user_id": "170",
+            "created_at": "December 11, 2023, 4:59 am"
+        },
+        {
+            "payment_id": 38,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "5685",
+            "user_id": "214",
+            "created_at": "December 11, 2023, 6:04 am"
+        },
+        {
+            "payment_id": 39,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "5685",
+            "user_id": "170",
+            "created_at": "December 11, 2023, 6:04 am"
+        },
+        {
+            "payment_id": 40,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "100",
+            "user_id": "170",
+            "created_at": "December 11, 2023, 2:17 pm"
+        },
+        {
+            "payment_id": 41,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "100",
+            "user_id": "166",
+            "created_at": "December 11, 2023, 2:17 pm"
+        },
+        {
+            "payment_id": 42,
+            "payment_token": "",
+            "payment_type": "withdraw",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "100",
+            "user_id": "201",
+            "created_at": "December 11, 2023, 3:38 pm"
+        },
+        {
+            "payment_id": 43,
+            "payment_token": "",
+            "payment_type": "deposite",
+            "payment_status": "",
+            "payment_gateway": "",
+            "amount": "100",
+            "user_id": "170",
+            "created_at": "December 11, 2023, 3:38 pm"
+        }
+    ]
+}
