@@ -19,6 +19,12 @@
 
             </li>
 
+            <li><a class="has-arrow ai-icon" href="banner.php" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">البانر الإعلاني</span>
+                </a>
+
+            </li>
 
             <li><a class="has-arrow ai-icon" href="adds.php" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
@@ -33,6 +39,8 @@
                     <span class="nav-text">المزادات</span>
                 </a>
             </li>
+
+
 
             <li><a class="has-arrow ai-icon" href="auctions.php" aria-expanded="false">
                     <i class="flaticon-381-controls-3"></i>
@@ -58,7 +66,7 @@
 
 
             <li>
-                <a class="has-arrow ai-icon" href="settings.php" aria-expanded="false">
+                <a class="has-arrow ai-icon" href="managment.php" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
                     <span class="nav-text"> قسم الإدارة</span>
                 </a>

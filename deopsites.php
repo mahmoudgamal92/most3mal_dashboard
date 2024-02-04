@@ -2,7 +2,7 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 $users = json_decode(CURL_GET(API_URL . 'records/payment_process?join=payment_process,users'), true);
-echo json_encode($users);
+//echo json_encode($users);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -66,28 +66,28 @@ echo json_encode($users);
                                             <?php
                                             foreach ($users['records'] as $item) {
                                             ?>
-                                                <tr>
-                                                    <td><?php echo $item['payment_id'] ?></td>
-                                                    <td><?php echo $item['payment_token'] ?></td>
-                                                    <td><?php echo $item['payment_type'] ?></td>
-                                                    <td><?php echo $item['payment_gateway'] ?></td>
+                                            <tr>
+                                                <td><?php echo $item['payment_id'] ?></td>
+                                                <td><?php echo $item['payment_token'] ?></td>
+                                                <td><?php echo $item['payment_type'] ?></td>
+                                                <td><?php echo $item['payment_gateway'] ?></td>
 
-                                                    <td>
-                                                        <span class="badge light badge-success">
-                                                            <?php echo $item['payment_status'] ?>
-                                                        </span>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $item['amount'] ?>
-                                                    </td>
+                                                <td>
+                                                    <span class="badge light badge-success">
+                                                        <?php echo $item['payment_status'] ?>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <?php echo $item['amount'] ?>
+                                                </td>
 
-                                                    <td>
-                                                        <?php echo $item['user_id'] ?>
-                                                    </td>
+                                                <td>
+                                                    <?php echo $item['user_id'] ?>
+                                                </td>
 
-                                                    <td><?php echo $item['created_at'] ?></td>
+                                                <td><?php echo $item['created_at'] ?></td>
 
-                                                </tr>
+                                            </tr>
                                             <?php
                                             }
                                             ?>
