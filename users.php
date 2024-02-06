@@ -5,41 +5,42 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
-    <body>
+
+<body>
     <!--********* Preloader start ******-->
-	<?php include 'include/loader.php'; ?>
+    <?php include 'include/loader.php'; ?>
     <!--********* Preloader End ******-->
 
-       <div id="main-wrapper">
+    <div id="main-wrapper">
 
         <!--*** Nav header start ***-->
-		<?php include 'include/nav_header.php'; ?>
+        <?php include 'include/nav_header.php'; ?>
         <!--*** Nav header end ****-->
-		
 
 
-		<!--***  Chat box start ***-->
-		<?php include 'include/chatbox.php'; ?>
-		<!--*** Chat box End ***-->
+
+        <!--***  Chat box start ***-->
+        <?php include 'include/chatbox.php'; ?>
+        <!--*** Chat box End ***-->
 
 
-		
-		<!--****  Header start ****-->
-		<?php include 'include/header.php'; ?>
+
+        <!--****  Header start ****-->
+        <?php include 'include/header.php'; ?>
         <!--**** Header end ****-->
 
 
 
         <!--*** Sidebar start ***-->
-          <?php include 'include/sidebar.php'; ?>
+        <?php include 'include/sidebar.php'; ?>
         <!--*** Sidebar end ***-->
-        
-		<!--**** Content body start ***-->
+
+        <!--**** Content body start ***-->
         <div class="content-body">
             <!-- row -->
-			<div class="container-fluid">
-				<div class="row">
-                <div class="col-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">المستخدمين </h4>
@@ -53,15 +54,15 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
                                                 <th>أسم المستخدم</th>
                                                 <th>البريد الإلكتروني</th>
                                                 <th>رقم الهاتف </th>
-												<th>حالة المستخدم</th>
-												<th>الرصيد الحالي </th>
+                                                <th>حالة المستخدم</th>
+                                                <th>الرصيد الحالي </th>
                                                 <th>تاريخ التسجيل</th>
                                                 <th>الإجراءات</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                        <?php 
+                                            <?php 
                                             foreach ($users['records'] as $item) {
                                                 ?>
                                             <tr>
@@ -69,33 +70,37 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
                                                 <td><?php echo $item['name'] ?></td>
                                                 <td><?php echo $item['email'] ?></td>
                                                 <td><?php echo $item['phone'] ?></td>
-                                                
+
                                                 <td>
-                                                <span class="badge light badge-success">
-                                                <?php echo $item['status'] ?>
-                                                </span>
+                                                    <span class="badge light badge-success">
+                                                        <?php echo $item['status'] ?>
+                                                    </span>
                                                 </td>
                                                 <td>
-                                                  <?php echo $item['current_balance'] ?>
+                                                    <?php echo $item['current_balance'] ?>
                                                 </td>
 
-                                                 <td><?php echo $item['created_at'] ?></td>
-                                                 <td>
-													<div class="d-flex">
+                                                <td><?php echo $item['created_at'] ?></td>
+                                                <td>
+                                                    <div class="d-flex">
 
-														<a href="#" 
-                                                        class="btn btn-primary shadow btn-xs sharp ms-1">
-                                                        <i class="fas fa-pencil-alt"></i>
-                                                       </a>
-
-														<a href="#" 
-                                                        class="btn btn-danger shadow btn-xs sharp">
-                                                        <i class="fa fa-trash"></i>
+                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
+                                                            <i class="fas fa-pencil-alt"></i>
                                                         </a>
-													<div>												
-												</td>	
+
+                                                        <a href="<?php echo "api/static/users.php?action=delete&id=".$item['id'] ?>"
+                                                            class="btn btn-danger shadow btn-xs sharp">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+
+
+                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                        <div>
+                                                </td>
                                             </tr>
-                                           <?php
+                                            <?php
                                             }
                                            ?>
                                         </tbody>
@@ -104,17 +109,17 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
                             </div>
                         </div>
                     </div>
-				</div>
+                </div>
             </div>
         </div>
         <!--*****  Content body end  ***-->
 
         <!--******* Footer start ***-->
-       <?php include 'include/footer.php'?>
+        <?php include 'include/footer.php'?>
         <!--*******   Footer end   *****-->
 
 
-	</div>
+    </div>
     <!--***** Main wrapper end ***-->
 
     <!--******* Scripts ******-->
