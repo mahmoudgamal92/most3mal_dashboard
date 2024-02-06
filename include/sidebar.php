@@ -42,7 +42,7 @@
 
 
 
-            <li><a class="has-arrow ai-icon" href="auctions.php" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" aria-expanded="false">
                     <i class="flaticon-381-controls-3"></i>
                     <span class="nav-text">قسم المالية</span>
                 </a>

@@ -43,14 +43,14 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">طلبات الإيداع </h4>
+                                <h4 class="card-title">عمليات الشراء</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>الترتيب</th>
+                                                <th>السعر</th>
                                                 <th>معرف العملية</th>
                                                 <th>النوع</th>
                                                 <th>الحالة</th>
@@ -66,10 +66,10 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
                                             foreach ($users['records'] as $item) {
                                             ?>
                                                 <tr>
-                                                    <td><?php echo $item['payment_id'] ?></td>
-                                                    <td><?php echo $item['payment_token'] ?></td>
-                                                    <td><?php echo $item['payment_type'] ?></td>
-                                                    <td><?php echo $item['payment_gateway'] ?></td>
+                                                    <td>-----</td>
+                                                    <td><?php echo $item['amount'] ?></td>
+                                                    <td><?php echo $item['item_id'] ?></td>
+                                                    <td><?php echo $item['status'] ?></td>
 
                                                     <td>
                                                         <span class="badge light badge-success">

@@ -48,12 +48,10 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>صورة الإعلان</th>
-                                                <th>رقم الإعلان</th>
-                                                <th>عنوان الإعلان</th>
-                                                <th>السعر</th>
-                                                <th>حالة الإعلان</th>
-                                                <th>العنوان</th>
+                                                <th>صورة القسم</th>
+                                                <th>رقم القسم</th>
+                                                <th>عنوان القسم</th>
+                                                <th>الحالة</th>
                                                 <th>تاريخ العرض</th>
                                                 <th>الإجراءات</th>
                                             </tr>

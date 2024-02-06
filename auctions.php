@@ -41,18 +41,18 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">الإعلانات </h4>
+                                <h4 class="card-title">المزادات</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>صورة الإعلان</th>
-                                                <th>رقم الإعلان</th>
-                                                <th>عنوان الإعلان</th>
+                                                <th>صورة المزاد</th>
+                                                <th>رقم المزاد</th>
+                                                <th>عنوان المزاد</th>
                                                 <th>السعر</th>
-                                                <th>حالة الإعلان</th>
+                                                <th>حالة المزاد</th>
                                                 <th>العنوان</th>
                                                 <th>تاريخ العرض</th>
                                                 <th>الإجراءات</th>
