@@ -40,9 +40,128 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
+
                             <div class="card-header">
                                 <h4 class="card-title">الإعلانات </h4>
+                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                    إضافة إعلان
+                                </a>
                             </div>
+
+                            <div class="modal fade" id="basicModal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <form method="post" action="api/departments/insert.php" enctype="multipart/form-data">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">إضافة قسم جدبد</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title">
+                                                                إضافة قسم جديد
+                                                            </h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="basic-form">
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
+
+                                                                </div>
+                                                                <p>
+                                                                    إختر صورة القسم
+                                                                </p>
+                                                                <div class="input-group custom_file_input">
+                                                                    <div class="form-file">
+                                                                        <input type="file" name="image" class="form-file-input form-control">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    حفظ التغيرات
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="modal fade" id="basicModal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <form method="post" action="api/departments/insert.php" enctype="multipart/form-data">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">إضافة قسم جدبد</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title">
+                                                                إضافة قسم جديد
+                                                            </h4>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="basic-form">
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
+                                                                </div>
+
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
+
+                                                                </div>
+                                                                <p>
+                                                                    إختر صورة القسم
+                                                                </p>
+                                                                <div class="input-group custom_file_input">
+                                                                    <div class="form-file">
+                                                                        <input type="file" name="image" class="form-file-input form-control">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    حفظ التغيرات
+                                                </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example4" class="display" style="min-width: 845px">
@@ -62,7 +181,9 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                             foreach ($users['records'] as $item) {
                                             ?>
                                                 <tr>
-                                                    <td>--</td>
+                                                    <td>
+                                                        <img src="uploads/<?= $item['image'] ?>" style="width:50px;height:50px" />
+                                                    </td>
                                                     <td><?php echo $item['id'] ?></td>
                                                     <td>
                                                         <?php
@@ -78,13 +199,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                                     <td><?php echo $item['created_at'] ?></td>
                                                     <td>
                                                         <div class="d-flex">
-
                                                             <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
                                                                 <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a href="#" class="btn btn-danger shadow btn-xs sharp">
-                                                                <i class="fa fa-trash"></i>
                                                             </a>
                                                             <div>
                                                     </td>
@@ -106,8 +222,6 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
         <!--******* Footer start ***-->
         <?php include 'include/footer.php' ?>
         <!--*******   Footer end   *****-->
-
-
     </div>
     <!--***** Main wrapper end ***-->
 

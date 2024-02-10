@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/payment_process'), true);
+$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_type,eq,withdraw'), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -58,6 +58,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process'), true);
                                                 <th>قيمة العملية</th>
                                                 <th>العميل</th>
                                                 <th>تاريخ التسجيل</th>
+                                                <th>الإجراءات</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -86,6 +88,11 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process'), true);
 
                                                     <td><?php echo $item['created_at'] ?></td>
 
+                                                    <td>
+                                                        <a href="ad.php?id=<?= $item['payment_id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                             <?php
                                             }

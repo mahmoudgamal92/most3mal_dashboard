@@ -1,15 +1,14 @@
 <?php
-$host = "localhost";     
-$username = "root";      
-$password = "";       
-$database = "most3mal"; 
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "most3mal";
 
 // Create a connection
-$conn = new mysqli($host, $username, $password, $database);
+$con = new mysqli($host, $username, $password, $database);
 
 // Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 // Connected successfully
-?>

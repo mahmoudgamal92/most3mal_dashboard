@@ -1,8 +1,9 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_type,eq,deposite'), true);
-//echo json_encode($users);
+$id = $_GET['id'];
+$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=user_id,eq,' . $id), true);
+
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -44,7 +45,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">طلبات الإيداع </h4>
+                                <h4 class="card-title">سجل المعاملات</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

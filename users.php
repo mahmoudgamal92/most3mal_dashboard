@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL.'records/users'), true);
+$users = json_decode(CURL_GET(API_URL . 'records/users'), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -58,51 +58,64 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
                                                 <th>الرصيد الحالي </th>
                                                 <th>تاريخ التسجيل</th>
                                                 <th>الإجراءات</th>
+                                                <th>سجل المعاملات</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                            <?php 
+                                            <?php
                                             foreach ($users['records'] as $item) {
-                                                ?>
-                                            <tr>
-                                                <td><?php echo $item['id'] ?></td>
-                                                <td><?php echo $item['name'] ?></td>
-                                                <td><?php echo $item['email'] ?></td>
-                                                <td><?php echo $item['phone'] ?></td>
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $item['id'] ?></td>
+                                                    <td><?php echo $item['name'] ?></td>
+                                                    <td><?php echo $item['email'] ?></td>
+                                                    <td><?php echo $item['phone'] ?></td>
 
-                                                <td>
-                                                    <span class="badge light badge-success">
-                                                        <?php echo $item['status'] ?>
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <?php echo $item['current_balance'] ?>
-                                                </td>
+                                                    <td>
+                                                        <span class="badge light badge-success">
+                                                            <?php echo $item['status'] ?>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $item['current_balance'] ?>
+                                                    </td>
 
-                                                <td><?php echo $item['created_at'] ?></td>
-                                                <td>
-                                                    <div class="d-flex">
+                                                    <td><?php echo $item['created_at'] ?></td>
+                                                    <td>
+                                                        <div class="d-flex">
 
-                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
-                                                            <i class="fas fa-pencil-alt"></i>
+                                                            <?php
+                                                            if ($item['status'] == "active") {
+                                                            ?>
+                                                                <a href="api/users/update.php?status=inactive&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من تعطيل المستخدم')" class="btn btn-danger">
+                                                                    تعطيل
+                                                                </a>
+                                                            <?php
+
+                                                            } else {
+                                                            ?>
+                                                                <a href="api/users/update.php?status=active&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من تفعيل المستخدم?')" class="btn btn-primary">
+                                                                    تفعيل
+                                                                </a>
+
+                                                            <?php
+
+                                                            }
+                                                            ?>
+
+                                                            <div>
+                                                    </td>
+
+                                                    <td>
+                                                        <a class="btn btn-primary" href="transactions.php?id=<?= $item['id'] ?>">
+                                                            عرض
                                                         </a>
-
-                                                        <a href="<?php echo "api/static/users.php?action=delete&id=".$item['id'] ?>"
-                                                            class="btn btn-danger shadow btn-xs sharp">
-                                                            <i class="fa fa-trash"></i>
-                                                        </a>
-
-
-                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                        <div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                </tr>
                                             <?php
                                             }
-                                           ?>
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -115,7 +128,7 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
         <!--*****  Content body end  ***-->
 
         <!--******* Footer start ***-->
-        <?php include 'include/footer.php'?>
+        <?php include 'include/footer.php' ?>
         <!--*******   Footer end   *****-->
 
 
@@ -123,7 +136,7 @@ $users = json_decode(CURL_GET(API_URL.'records/users'), true);
     <!--***** Main wrapper end ***-->
 
     <!--******* Scripts ******-->
-    <?php include 'include/scripts.php'?>
+    <?php include 'include/scripts.php' ?>
 </body>
 
 </html>
