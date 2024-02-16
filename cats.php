@@ -1,7 +1,8 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
+$depart_id = $_GET['id'];
+$users = json_decode(CURL_GET(API_URL . 'records/categories?filter=depart_id,eq,' . $depart_id), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -43,17 +44,20 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
 
                             <div class="card-header">
                                 <h4 class="card-title">
-                                    الأقسام الرئيسية
+                                    الأقسام الفرعية
                                 </h4>
                                 <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
                                     إضافة قسم
                                 </a>
                             </div>
 
+
+
+
                             <div class="modal fade" id="basicModal">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
-                                        <form method="post" action="api/departments/insert.php" enctype="multipart/form-data">
+                                        <form method="post" action="api/cats/insert.php" enctype="multipart/form-data">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">إضافة قسم جدبد</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal">
@@ -69,7 +73,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                                         </div>
                                                         <div class="card-body">
                                                             <div class="basic-form">
-
+                                                                <input type="hidden" name="depart_id" value="<?= $depart_id ?>">
                                                                 <div class="mb-3">
                                                                     <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
                                                                 </div>
@@ -79,72 +83,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                                                     <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
 
                                                                 </div>
-                                                                <p>
-                                                                    إختر صورة القسم
-                                                                </p>
-                                                                <div class="input-group custom_file_input">
-                                                                    <div class="form-file">
-                                                                        <input type="file" name="image" class="form-file-input form-control">
-                                                                    </div>
-                                                                </div>
 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
-                                                <button type="submit" class="btn btn-primary">
-                                                    حفظ التغيرات
-                                                </button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="modal fade" id="basicModal">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <form method="post" action="api/departments/insert.php" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">إضافة قسم جدبد</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal">
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="col-xl-12 col-lg-12">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <h4 class="card-title">
-                                                                إضافة قسم جديد
-                                                            </h4>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="basic-form">
-
-                                                                <div class="mb-3">
-                                                                    <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
-                                                                </div>
-
-
-                                                                <div class="mb-3">
-                                                                    <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
-
-                                                                </div>
-                                                                <p>
-                                                                    إختر صورة القسم
-                                                                </p>
-                                                                <div class="input-group custom_file_input">
-                                                                    <div class="form-file">
-                                                                        <input type="file" name="image" class="form-file-input form-control">
-                                                                    </div>
-                                                                </div>
 
                                                             </div>
                                                         </div>
@@ -169,9 +108,9 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>صورة القسم</th>
-                                                <th>رقم القسم</th>
-                                                <th>عنوان القسم</th>
+                                                <th>القسم الرئيسي</th>
+                                                <th>رقم الفئة</th>
+                                                <th>عنوان الفئة</th>
                                                 <th>الحالة</th>
                                                 <th>تاريخ العرض</th>
                                                 <th>الإجراءات</th>
@@ -183,9 +122,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                             foreach ($users['records'] as $item) {
                                             ?>
                                                 <tr>
-                                                    <td>
-                                                        <img src="uploads/<?= $item['image'] ?>" style="width:50px;height:50px" />
-                                                    </td>
+                                                    <td><?php echo $item['depart_id'] ?></td>
                                                     <td><?php echo $item['id'] ?></td>
                                                     <td>
                                                         <?php
@@ -206,15 +143,9 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                                                 <i class="fas fa-pencil-alt"></i>
                                                             </a>
 
-                                                            <a href="cats.php?id=<?= $item['id'] ?>" class="btn btn-info shadow btn-sm sharp ms-1">
-                                                                <i class="fas fa-eye"></i>
-                                                            </a>
-
-
-                                                            <a href="api/departments/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من حذف القسم ؟')" class="btn btn-danger shadow btn-sm sharp ms-1">
+                                                            <a onclick="return confirm('هل أنت متأكد من  حذف الفئة ؟')" href="api/cats/delete.php?id=<?= $item['id'] ?>&depart_id=<?= $depart_id ?>" class="btn btn-danger shadow btn-sm sharp ms-1">
                                                                 <i class="fas fa-trash"></i>
                                                             </a>
-
                                                             <div>
                                                     </td>
                                                 </tr>

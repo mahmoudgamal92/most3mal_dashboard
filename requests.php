@@ -50,14 +50,14 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <thead>
                                             <tr>
-                                                <th>السعر</th>
                                                 <th>معرف العملية</th>
-                                                <th>النوع</th>
-                                                <th>الحالة</th>
-                                                <th>بوابة الدفع</th>
-                                                <th>قيمة العملية</th>
-                                                <th>العميل</th>
+                                                <th>المنتج</th>
+                                                <th>المشتري</th>
+                                                <th>السعر</th>
+                                                <th>حالة العملية</th>
+                                                <th>التقييم</th>
                                                 <th>تاريخ التسجيل</th>
+                                                <th>الإجراءات</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -66,25 +66,35 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
                                             foreach ($users['records'] as $item) {
                                             ?>
                                                 <tr>
-                                                    <td>-----</td>
-                                                    <td><?php echo $item['amount'] ?></td>
+                                                    <td><?php echo $item['id'] ?></td>
                                                     <td><?php echo $item['item_id'] ?></td>
-                                                    <td><?php echo $item['status'] ?></td>
+                                                    <td><?php echo $item['user_id'] ?></td>
 
+                                                    <td><?php echo $item['amount'] ?></td>
                                                     <td>
                                                         <span class="badge light badge-success">
-                                                            <?php echo $item['payment_status'] ?>
+                                                            <?php echo $item['status'] ?>
                                                         </span>
                                                     </td>
-                                                    <td>
-                                                        <?php echo $item['amount'] ?>
-                                                    </td>
+                                                    <td><?php echo $item['rating_val'] ?></td>
 
-                                                    <td>
-                                                        <?php echo $item['user_id'] ?>
-                                                    </td>
 
                                                     <td><?php echo $item['created_at'] ?></td>
+                                                    <td>
+                                                        <div class="d-flex">
+
+                                                            <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                                <i class="fas fa-eye"></i>
+                                                            </a>
+
+
+                                                            <a href="#" class="btn btn-info shadow btn-sm sharp ms-1">
+                                                                <i class="fas fa-pencil-alt"></i>
+                                                            </a>
+
+
+                                                        </div>
+                                                    </td>
 
                                                 </tr>
                                             <?php

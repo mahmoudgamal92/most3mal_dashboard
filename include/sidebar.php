@@ -19,18 +19,19 @@
 
             </li>
 
-            <li><a class="has-arrow ai-icon" href="banner.php" aria-expanded="false">
+            <li>
+                <a class="has-arrow ai-icon" href="banner.php" aria-expanded="false">
                     <i class="flaticon-381-picture"></i>
                     <span class="nav-text">البانر الإعلاني</span>
                 </a>
 
             </li>
 
-            <li><a class="has-arrow ai-icon" href="ads.php" aria-expanded="false">
+            <li>
+                <a class="has-arrow ai-icon" href="ads.php" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
                     <span class="nav-text">الإعلانات</span>
                 </a>
-
             </li>
 
             <li>
@@ -42,17 +43,15 @@
 
 
 
-            <li><a class="has-arrow ai-icon" aria-expanded="false">
+            <li>
+                <a class="has-arrow ai-icon" aria-expanded="false">
                     <i class="flaticon-381-dollar"></i>
                     <span class="nav-text">قسم المالية</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="requests.php">عمليات الشراء </a></li>
+                    <li><a href="requests.php">الصفقات</a></li>
                     <li><a href="deopsites.php">طلبات الإيداع</a></li>
                     <li><a href="withdraws.php">طلبات السحب</a></li>
-                    <!-- <li><a href="chart-chartist.html">Chartist</a></li>
-                    <li><a href="chart-sparkline.html">Sparkline</a></li>
-                    <li><a href="chart-peity.html">Peity</a></li> -->
                 </ul>
             </li>
 
@@ -63,9 +62,6 @@
                 </a>
             </li>
 
-
-
-
             <li><a class="has-arrow ai-icon" aria-expanded="false">
                     <i class="flaticon-381-television"></i>
                     <span class="nav-text">قسم الإدارة</span>
@@ -73,18 +69,10 @@
                 <ul aria-expanded="false">
                     <li><a href="reports.php">التقارير المالية</a></li>
                     <li><a href="employees.php">الموظفين</a></li>
+                    <li><a href="permissions.php">الصلاحيات</a></li>
                     <li><a href="logs.php">تحركات المستخدمين</a></li>
                 </ul>
             </li>
-
-
-            <li>
-                <a class="has-arrow ai-icon" href="managment.php" aria-expanded="false">
-                    <i class="flaticon-381-television"></i>
-                    <span class="nav-text"> قسم الإدارة</span>
-                </a>
-            </li>
-
         </ul>
 
         <div class="copyright">
