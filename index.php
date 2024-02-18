@@ -2,7 +2,6 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 ?>
-
 <?php include 'include/headTag.php'; ?>
 
 <body>

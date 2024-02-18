@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/permissions'), true);
+$users = json_decode(CURL_GET(API_URL . 'records/roles'), true);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -58,9 +58,9 @@ $users = json_decode(CURL_GET(API_URL . 'records/permissions'), true);
                             <div class="modal fade" id="basicModal">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
-                                        <form method="post" action="api/departments/insert.php" enctype="multipart/form-data">
+                                        <form method="post" action="api/roles/insert.php" enctype="multipart/form-data">
                                             <div class="modal-header">
-                                                <h5 class="modal-title">إضافة قسم جدبد</h5>
+                                                <h5 class="modal-title">إضافة جدبد</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal">
                                                 </button>
                                             </div>
@@ -69,23 +69,51 @@ $users = json_decode(CURL_GET(API_URL . 'records/permissions'), true);
                                                     <div class="card">
                                                         <div class="card-header">
                                                             <h4 class="card-title">
-                                                                إضافة قسم جديد
+                                                                إضافة صلاحية جديدة للموظفين
+                                                                (مسمي وظيفي)
                                                             </h4>
                                                         </div>
                                                         <div class="card-body">
                                                             <div class="basic-form">
-                                                                <select multiple class="default-select form-control wide mt-3">
-                                                                    <option>المستخدمين </option>
-                                                                    <option>الأقسام</option>
-                                                                    <option>البانر الاعلاني</option>
-                                                                    <option>الاعلانات </option>
-                                                                    <option>المزادات</option>
+
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default" name="title" placeholder="المسمي الوظيفي">
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <input type="text" class="form-control input-default" name="name" placeholder="المعرف البرمجي">
+                                                                </div>
+                                                                <p>
+                                                                    إختر الأقسام المتاحة للمستخدم
+                                                                </p>
+
+                                                                <select name="roles[]" multiple class="default-select form-control wide mt-3">
+
+                                                                    <option value="users">
+                                                                        المستخدمين
+                                                                    </option>
+                                                                    <option value="departments">
+                                                                        الأقسام
+                                                                    </option>
+                                                                    <option value="banner">
+                                                                        البانر الاعلاني
+                                                                    </option>
+                                                                    <option value="ads">
+                                                                        الاعلانات
+                                                                    </option>
+                                                                    <option value="auctions">
+                                                                        المزادات
+                                                                    </option>
+
+                                                                    <option value="finance">
+                                                                        قسم المالية
+                                                                    </option>
+
+                                                                    <option value="managment">
+                                                                        قسم الإدارة
+                                                                    </option>
                                                                 </select>
-
-
-
-
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -115,7 +143,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/permissions'), true);
                                                 <th>الصلاحيات</th>
                                                 <th>الحالة</th>
                                                 <th>تاريخ التسجيل</th>
-                                                <th>تعديل</th>
+                                                <th>الإجراءات</th>
                                             </tr>
                                         </thead>
                                         <tbody>

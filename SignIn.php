@@ -1,3 +1,24 @@
+<?php
+session_start();
+include_once './dbcontext/connect.php';
+if (isset($_POST['email'])) {
+    $email = $_POST['email'];
+    $pwd = $_POST['password'];
+    $cmd = "select * from employees where email ='$email' and password = '$pwd'";
+    $result = mysqli_query($con, $cmd);
+    $count = mysqli_num_rows($result);
+    if ($count == 1) {
+        $row = mysqli_fetch_array($result);
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['id'] = $row['id'];
+        $_SESSION['email'] = $row['email'];
+        header("Location: index.php");
+    } else {
+        header("Location: signin.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
@@ -28,22 +49,22 @@
                                 <div class="auth-form">
                                     <div class="text-center mb-3">
                                         <a href="index.html">
-                                            <img src="images/logo-full.png" alt="">
+                                            <img src="images/logo-full.png" alt="" style="width:250px;height:100px">
                                         </a>
                                     </div>
                                     <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="#">
+                                    <form action="signin.php" method="post">
                                         <div class="form-group">
                                             <label class="mb-1">
                                                 <strong>Email</strong>
                                             </label>
-                                            <input type="email" class="form-control" value="hello@example.com">
+                                            <input type="email" class="form-control" name="email">
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1">
                                                 <strong>Password</strong>
                                             </label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input type="password" class="form-control" name="password">
                                         </div>
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
@@ -77,7 +98,7 @@
     <script src="js/custom.min.js"></script>
     <script src="js/deznav-init.js"></script>
     <script src="js/demo.js"></script>
-    <script src="js/styleSwitcher.js"></script>
+    <!-- <script src="js/styleSwitcher.js"></script> -->
 </body>
 
 </html>

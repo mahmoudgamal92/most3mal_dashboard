@@ -1,5 +1,10 @@
 <?php
-function CURL_POST ($url, $postData) {
+session_start();
+if (!isset($_SESSION['name'])) {
+    header("Location: http://localhost/most3mal/signin.php");
+}
+function CURL_POST($url, $postData)
+{
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_POST, 1);
@@ -12,7 +17,8 @@ function CURL_POST ($url, $postData) {
     curl_close($ch);
     return $response;
 }
-function CURL_GET($url) {
+function CURL_GET($url)
+{
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -23,7 +29,8 @@ function CURL_GET($url) {
     curl_close($ch);
     return $response;
 }
-function CURL_PUT($url, $putData) {
+function CURL_PUT($url, $putData)
+{
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
@@ -36,7 +43,8 @@ function CURL_PUT($url, $putData) {
     curl_close($ch);
     return $response;
 }
-function CURL_DELETE($url) {
+function CURL_DELETE($url)
+{
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');

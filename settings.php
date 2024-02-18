@@ -199,37 +199,8 @@ function getValueByKey($key)
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">لوجو التطبيق</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div>
-                                            <img src="" style="width:100px;height:100px" />
-                                        </div>
-
-                                        <div class="input-group custom_file_input">
-                                            <div class="form-file">
-                                                <input type="file" name="image" class="form-file-input form-control">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-
-
             </div>
-
-
 
         </div>
         <!--*****  Content body end  ***-->

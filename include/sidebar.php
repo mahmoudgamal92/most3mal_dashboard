@@ -69,7 +69,7 @@
                 <ul aria-expanded="false">
                     <li><a href="reports.php">التقارير المالية</a></li>
                     <li><a href="employees.php">الموظفين</a></li>
-                    <li><a href="permissions.php">الصلاحيات</a></li>
+                    <li><a href="roles.php">الصلاحيات</a></li>
                     <li><a href="logs.php">تحركات المستخدمين</a></li>
                 </ul>
             </li>
