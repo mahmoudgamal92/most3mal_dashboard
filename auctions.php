@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
+$auctions = _Read('auctions');
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -61,33 +61,33 @@ $users = json_decode(CURL_GET(API_URL . 'records/auctions'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($auctions as $item) {
                                             ?>
-                                                <tr>
-                                                    <td>--</td>
-                                                    <td><?php echo $item['auction_number'] ?></td>
-                                                    <td><?php echo $item['title'] ?></td>
-                                                    <td><?php echo $item['duration'] ?></td>
-                                                    <td>
-                                                        <span class="badge light badge-success">
-                                                            <?php echo $item['status'] ?>
-                                                        </span>
-                                                    </td>
-                                                    <td><?php echo $item['address'] ?></td>
-                                                    <td><?php echo $item['created_at'] ?></td>
-                                                    <td>
-                                                        <div class="d-flex">
+                                            <tr>
+                                                <td>--</td>
+                                                <td><?php echo $item['auction_number'] ?></td>
+                                                <td><?php echo $item['title'] ?></td>
+                                                <td><?php echo $item['duration'] ?></td>
+                                                <td>
+                                                    <span class="badge light badge-success">
+                                                        <?php echo $item['status'] ?>
+                                                    </span>
+                                                </td>
+                                                <td><?php echo $item['address'] ?></td>
+                                                <td><?php echo $item['created_at'] ?></td>
+                                                <td>
+                                                    <div class="d-flex">
 
-                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
+                                                        <a href="#" class="btn btn-primary shadow btn-xs sharp ms-1">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
 
-                                                            <a href="#" class="btn btn-danger shadow btn-xs sharp">
-                                                                <i class="fa fa-trash"></i>
-                                                            </a>
-                                                            <div>
-                                                    </td>
-                                                </tr>
+                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                        <div>
+                                                </td>
+                                            </tr>
                                             <?php
                                             }
                                             ?>

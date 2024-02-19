@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/banners'), true);
+$banner = _Read('banners');
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -68,12 +68,14 @@ $users = json_decode(CURL_GET(API_URL . 'records/banners'), true);
                                             <div class="basic-form">
 
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
+                                                    <input type="text" class="form-control input-default "
+                                                        name="name_ar" placeholder="الأسم بالعربية">
                                                 </div>
 
 
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
+                                                    <input type="text" class="form-control input-default" name="name_en"
+                                                        placeholder="الأسم بالإنجليزية">
 
                                                 </div>
                                                 <p>
@@ -81,7 +83,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/banners'), true);
                                                 </p>
                                                 <div class="input-group custom_file_input">
                                                     <div class="form-file">
-                                                        <input type="file" name="image" class="form-file-input form-control">
+                                                        <input type="file" name="image"
+                                                            class="form-file-input form-control">
                                                     </div>
                                                 </div>
 
@@ -91,7 +94,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/banners'), true);
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                <button type="button" class="btn btn-danger light"
+                                    data-bs-dismiss="modal">إغلاق</button>
                                 <button type="submit" class="btn btn-primary">
                                     حفظ التغيرات
                                 </button>
@@ -133,31 +137,34 @@ $users = json_decode(CURL_GET(API_URL . 'records/banners'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($banner as $item) {
                                             ?>
-                                                <tr>
-                                                    <td><?php echo $item['id'] ?></td>
-                                                    <td>
-                                                        <img src="uploads/<?= $item['image'] ?>" style="width:50px;height:50px" />
-                                                    </td>
-                                                    <td>
-                                                        <?php
+                                            <tr>
+                                                <td><?php echo $item['id'] ?></td>
+                                                <td>
+                                                    <img src="uploads/<?= $item['image'] ?>"
+                                                        style="width:50px;height:50px" />
+                                                </td>
+                                                <td>
+                                                    <?php
                                                         $obj = json_decode($item['name'], true);
                                                         echo $obj['ar'];
                                                         ?>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge light badge-success">
-                                                            <?php echo $item['status'] ?>
-                                                        </span>
-                                                    </td>
-                                                    <td><?php echo $item['created_at'] ?></td>
-                                                    <td>
-                                                        <a href="api/banner/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من حذف  البانر')" class="btn btn-primary shadow btn-sm sharp ms-1">
-                                                            <i class="fas fa-trash"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                </td>
+                                                <td>
+                                                    <span class="badge light badge-success">
+                                                        <?php echo $item['status'] ?>
+                                                    </span>
+                                                </td>
+                                                <td><?php echo $item['created_at'] ?></td>
+                                                <td>
+                                                    <a href="api/banner/delete.php?id=<?= $item['id'] ?>"
+                                                        onclick="return confirm('هل أنت متأكد من حذف  البانر')"
+                                                        class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
                                             <?php
                                             }
                                             ?>

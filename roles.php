@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/roles'), true);
+$roles = _Read('roles');
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -78,17 +78,22 @@ $users = json_decode(CURL_GET(API_URL . 'records/roles'), true);
 
 
                                                                 <div class="mb-3">
-                                                                    <input type="text" class="form-control input-default" name="title" placeholder="المسمي الوظيفي">
+                                                                    <input type="text"
+                                                                        class="form-control input-default" name="title"
+                                                                        placeholder="المسمي الوظيفي">
                                                                 </div>
 
                                                                 <div class="mb-3">
-                                                                    <input type="text" class="form-control input-default" name="name" placeholder="المعرف البرمجي">
+                                                                    <input type="text"
+                                                                        class="form-control input-default" name="name"
+                                                                        placeholder="المعرف البرمجي">
                                                                 </div>
                                                                 <p>
                                                                     إختر الأقسام المتاحة للمستخدم
                                                                 </p>
 
-                                                                <select name="roles[]" multiple class="default-select form-control wide mt-3">
+                                                                <select name="roles[]" multiple
+                                                                    class="default-select form-control wide mt-3">
 
                                                                     <option value="users">
                                                                         المستخدمين
@@ -120,7 +125,8 @@ $users = json_decode(CURL_GET(API_URL . 'records/roles'), true);
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
+                                                <button type="button" class="btn btn-danger light"
+                                                    data-bs-dismiss="modal">إغلاق</button>
                                                 <button type="submit" class="btn btn-primary">
                                                     حفظ التغيرات
                                                 </button>
@@ -149,21 +155,21 @@ $users = json_decode(CURL_GET(API_URL . 'records/roles'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($roles as $item) {
                                             ?>
-                                                <tr>
-                                                    <td><?php echo $item['id'] ?></td>
-                                                    <td><?php echo $item['title'] ?></td>
-                                                    <td><?php echo $item['name'] ?></td>
-                                                    <td><?php echo $item['role'] ?></td>
-                                                    <td><?php echo $item['status'] ?></td>
-                                                    <td><?php echo $item['created_at'] ?></td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
-                                                            <i class="fas fa-pencil-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                            <tr>
+                                                <td><?php echo $item['id'] ?></td>
+                                                <td><?php echo $item['title'] ?></td>
+                                                <td><?php echo $item['name'] ?></td>
+                                                <td><?php echo $item['role'] ?></td>
+                                                <td><?php echo $item['status'] ?></td>
+                                                <td><?php echo $item['created_at'] ?></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
                                             <?php
                                             }
                                             ?>

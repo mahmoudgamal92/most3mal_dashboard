@@ -1,11 +1,8 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "most3mal";
+include './../utils/config.php';
 
 // Create a connection
-$con = new mysqli($host, $username, $password, $database);
+$con = new mysqli(DB_HOST, DB_USER , DB_PASSWORD, DB_DATABASE);
 
 // Check the connection
 if ($con->connect_error) {
