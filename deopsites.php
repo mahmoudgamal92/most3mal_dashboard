@@ -1,8 +1,8 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_type,eq,deposite'), true);
-//echo json_encode($users);
+$params = array('payment_type' => 'deposite');
+$deposites = _Read('payment_process', $params);
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -64,7 +64,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($deposites as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['payment_id'] ?></td>
@@ -87,6 +87,11 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_
 
                                                     <td><?php echo $item['created_at'] ?></td>
 
+                                                    <td>
+                                                        <a href="transaction.php?id=<?= $item['payment_id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                             <?php
                                             }

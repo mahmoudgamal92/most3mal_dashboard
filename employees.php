@@ -1,8 +1,8 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$employees = json_decode(CURL_GET(API_URL . 'records/employees'), true);
-$roles = json_decode(CURL_GET(API_URL . 'records/roles'), true);
+$employees = _Read('employees');
+$roles = _Read('roles');
 ?>
 <?php include 'include/headTag.php'; ?>
 
@@ -84,7 +84,7 @@ $roles = json_decode(CURL_GET(API_URL . 'records/roles'), true);
 
                                                 <select name="role" class="default-select form-control wide mt-3">
                                                     <?php
-                                                    foreach ($roles['records'] as $item) {
+                                                    foreach ($roles as $item) {
                                                     ?>
                                                         <option value=" <?php echo $item['name']; ?>">
                                                             <?php echo $item['title']; ?>
@@ -147,7 +147,7 @@ $roles = json_decode(CURL_GET(API_URL . 'records/roles'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($employees['records'] as $item) {
+                                            foreach ($employees as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['id'] ?></td>

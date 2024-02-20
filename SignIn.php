@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once './dbcontext/connect.php';
+include './dbcontext/connect.php';
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $pwd = $_POST['password'];

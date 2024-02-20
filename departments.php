@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
+$departs = _Read('departments');
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -180,7 +180,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/departments'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($departs as $item) {
                                             ?>
                                                 <tr>
                                                     <td>

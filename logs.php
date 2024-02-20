@@ -2,7 +2,7 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 $id = $_GET['id'];
-$users = json_decode(CURL_GET(API_URL . 'records/logs'), true);
+$logs = _Read('logs');
 
 ?>
 
@@ -62,7 +62,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/logs'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($logs as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['id'] ?></td>

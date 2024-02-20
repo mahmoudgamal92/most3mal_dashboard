@@ -2,10 +2,9 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 $id = $_GET['id'];
-$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=user_id,eq,' . $id), true);
-
+$params = array('user_id' => $id);
+$withdraws = _Read('payment_process', $params);
 ?>
-
 <?php include 'include/headTag.php'; ?>
 
 <body>
@@ -45,7 +44,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=user_id,
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">سجل المعاملات</h4>
+                                <h4 class="card-title">طلبات الإيداع </h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -60,12 +59,14 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=user_id,
                                                 <th>قيمة العملية</th>
                                                 <th>العميل</th>
                                                 <th>تاريخ التسجيل</th>
+                                                <th>الإجراءات</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($withdraws as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['payment_id'] ?></td>
@@ -87,6 +88,34 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=user_id,
                                                     </td>
 
                                                     <td><?php echo $item['created_at'] ?></td>
+
+                                                    <td>
+                                                        <a href="transaction.php?id=<?= $item['payment_id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button type="button" class="btn btn-danger light sharp" data-bs-toggle="dropdown">
+                                                                <i class="fas fa-pencil-alt">
+
+                                                                </i>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+
+                                                                <a class="dropdown-item" href="api/payment/update.php?status=delivered&id=<?= $item['payment_id'] ?>" onclick="return confirm('هل أنت متأكد من إتمام الطلب')" class="btn btn-danger">
+                                                                    إتمام الطلب
+                                                                </a>
+
+
+                                                                <a class="dropdown-item" href="api/payment/update.php?status=cancelled&id=<?= $item['payment_id'] ?>" onclick="return confirm('هل أنت متأكد من إلغاء الطلب')" class="btn btn-danger">
+                                                                    إلغاء الطلب
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
 
                                                 </tr>
                                             <?php

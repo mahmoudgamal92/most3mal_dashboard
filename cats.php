@@ -2,9 +2,9 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 $depart_id = $_GET['id'];
-$users = json_decode(CURL_GET(API_URL . 'records/categories?filter=depart_id,eq,' . $depart_id), true);
+$params = array("depart_id" => $depart_id);
+$cats = _Read('categories', $params);
 ?>
-
 <?php include 'include/headTag.php'; ?>
 
 <body>
@@ -119,7 +119,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/categories?filter=depart_id,eq,
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($cats as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['depart_id'] ?></td>

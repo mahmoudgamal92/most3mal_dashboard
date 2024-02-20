@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
+$requests = _Read('item_offers');
 ?>
 
 <?php include 'include/headTag.php'; ?>
@@ -63,7 +63,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($requests as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['id'] ?></td>
@@ -81,18 +81,35 @@ $users = json_decode(CURL_GET(API_URL . 'records/item_offers'), true);
 
                                                     <td><?php echo $item['created_at'] ?></td>
                                                     <td>
-                                                        <div class="d-flex">
+                                                        <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                    </td>
 
-                                                            <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
-                                                                <i class="fas fa-eye"></i>
-                                                            </a>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button type="button" class="btn btn-danger light sharp" data-bs-toggle="dropdown">
+                                                                <i class="fas fa-pencil-alt">
+
+                                                                </i>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+
+                                                                <a class="dropdown-item" href="api/requests/update.php?status=delivered&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من إتمام الصفقة')" class="btn btn-danger">
+                                                                    إتمام الصفقة
+                                                                </a>
 
 
-                                                            <a href="#" class="btn btn-info shadow btn-sm sharp ms-1">
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
+                                                                <a class="dropdown-item" href="api/requests/update.php?status=cancelled&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من إلغاء الصفقة')" class="btn btn-danger">
+                                                                    إلغاء الصفقة
+                                                                </a>
 
 
+                                                                <a class="dropdown-item" href="api/requests/update.php?status=onhold&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من تعليق الصفقة')" class="btn btn-danger">
+                                                                    تعليق الصفقة
+                                                                </a>
+
+                                                            </div>
                                                         </div>
                                                     </td>
 

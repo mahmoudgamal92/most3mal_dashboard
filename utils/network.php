@@ -4,20 +4,21 @@ include 'config.php';
 
 session_start();
 if (!isset($_SESSION['name'])) {
-    header("Location: https://mestamal.com/dashboard/signin.php");
+    header("Location: " . SIGNIN_URL);
 }
 
 // Function to select rows from a table based on arguments
-function _Read ($tableName, $arguments = array()) {
+function _Read($tableName, $arguments = array())
+{
     // Database connection parameters
 
     try {
         // Create a PDO instance
-        $pdo = new PDO( CONNECTION_STRING , DB_USER, DB_PASSWORD);
+        $pdo = new PDO(CONNECTION_STRING, DB_USER, DB_PASSWORD);
 
         // Build the SQL query
         $sql = "SELECT * FROM $tableName";
-        
+
         // Add WHERE conditions based on arguments, if provided
         if (!empty($arguments)) {
             $conditions = array();
@@ -47,7 +48,8 @@ function _Read ($tableName, $arguments = array()) {
 
 
 // Function to insert a row into a table
-function insertIntoTable($tableName, $data) {
+function insertIntoTable($tableName, $data)
+{
     // Database connection parameters
     $dsn = 'mysql:host=localhost;dbname=your_database_name';
     $username = 'your_username';
@@ -76,24 +78,3 @@ function insertIntoTable($tableName, $data) {
         return false; // Return false on failure
     }
 }
-
-?>
-
-
-
-
-
-<!--// Example usage:-->
-<!--$tableName = 'your_table_name';-->
-<!--$data = array(-->
-<!--    'column1' => 'value1',-->
-<!--    'column2' => 'value2',-->
-<!--    // Add more columns and values as needed-->
-<!--);-->
-
-<!--// Call the insert function-->
-<!--if (insertIntoTable($tableName, $data)) {-->
-<!--    echo "Insert successful!";-->
-<!--} else {-->
-<!--    echo "Insert failed!";-->
-<!--}-->

@@ -1,9 +1,12 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_type,eq,withdraw'), true);
-?>
 
+$params = array('payment_type' => 'withdraw');
+$withdraws = _Read('payment_process', $params);
+
+
+?>
 <?php include 'include/headTag.php'; ?>
 
 <body>
@@ -65,7 +68,7 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_
                                         <tbody>
 
                                             <?php
-                                            foreach ($users['records'] as $item) {
+                                            foreach ($withdraws as $item) {
                                             ?>
                                                 <tr>
                                                     <td><?php echo $item['payment_id'] ?></td>
@@ -89,10 +92,33 @@ $users = json_decode(CURL_GET(API_URL . 'records/payment_process?filter=payment_
                                                     <td><?php echo $item['created_at'] ?></td>
 
                                                     <td>
-                                                        <a href="ad.php?id=<?= $item['payment_id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                        <a href="transaction.php?id=<?= $item['payment_id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
                                                     </td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <button type="button" class="btn btn-danger light sharp" data-bs-toggle="dropdown">
+                                                                <i class="fas fa-pencil-alt">
+
+                                                                </i>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+
+                                                                <a class="dropdown-item" href="api/payment/update.php?status=delivered&id=<?= $item['payment_id'] ?>" onclick="return confirm('هل أنت متأكد من إتمام الطلب')" class="btn btn-danger">
+                                                                    إتمام الطلب
+                                                                </a>
+
+
+                                                                <a class="dropdown-item" href="api/payment/update.php?status=cancelled&id=<?= $item['payment_id'] ?>" onclick="return confirm('هل أنت متأكد من إلغاء الطلب')" class="btn btn-danger">
+                                                                    إلغاء الطلب
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
                                                 </tr>
                                             <?php
                                             }
