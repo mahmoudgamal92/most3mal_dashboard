@@ -46,7 +46,30 @@ $withdraws = _Read('payment_process', $params);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">طلبات الإيداع </h4>
+                                <div class="col-md-6">
+                                    <h4 class="card-title">
+                                        طلبات السحب
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+
+
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" href="export.php?tableName=payment_process">
+                                                تصدير CSV
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="btn btn-info" onclick="window.reload()">
+                                                تحديث
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

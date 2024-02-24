@@ -43,8 +43,32 @@ $ads = _Read('ads');
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">الإعلانات </h4>
+                                <div class="col-md-6">
+                                    <h4 class="card-title">
+                                        الإعلانات
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+
+
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" href="export.php?tableName=ads">
+                                                تصدير CSV
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="btn btn-info" onclick="window.reload()">
+                                                تحديث
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example4" class="display" style="min-width: 845px">
@@ -65,85 +89,71 @@ $ads = _Read('ads');
                                             <?php
                                             foreach ($ads as $item) {
                                             ?>
-                                            <tr>
-                                                <td><img src="./uploads/<?= $item['images'] ?>"
-                                                        style="width:50px;width:50px" /></td>
-                                                <td><?php echo $item['ad_number'] ?></td>
-                                                <td><?php echo $item['title'] ?></td>
-                                                <td><?php echo $item['price'] ?></td>
-                                                <td>
-                                                    <?php
+                                                <tr>
+                                                    <td><img src="./uploads/<?= $item['images'] ?>" style="width:50px;width:50px" /></td>
+                                                    <td><?php echo $item['ad_number'] ?></td>
+                                                    <td><?php echo $item['title'] ?></td>
+                                                    <td><?php echo $item['price'] ?></td>
+                                                    <td>
+                                                        <?php
                                                         if ($item['status'] == "active") {
                                                         ?>
-                                                    <span class="badge light badge-success">
-                                                        <?php echo $item['status'] ?>
-                                                    </span>
-                                                    <?php
+                                                            <span class="badge light badge-success">
+                                                                <?php echo $item['status'] ?>
+                                                            </span>
+                                                        <?php
                                                         } else {
                                                         ?>
-                                                    <span class="badge light badge-danger">
-                                                        <?php echo $item['status'] ?>
-                                                    </span>
-                                                    <?php
+                                                            <span class="badge light badge-danger">
+                                                                <?php echo $item['status'] ?>
+                                                            </span>
+                                                        <?php
                                                         }
                                                         ?>
-                                                </td>
-                                                <td><?php echo $item['address'] ?></td>
-                                                <td><?php echo $item['created_at'] ?></td>
-                                                <td>
-                                                    <div class="d-flex">
-
-
-                                                        <a href="api/ads/delete.php?&id=<?= $item['id'] ?>"
-                                                            onclick="return confirm('هل أنت متأكد من حذف الإعلان')"
-                                                            class="btn btn-danger shadow btn-sm sharp ms-1">
-                                                            <i class="fa fa-trash"></i>
-                                                        </a>
-
-                                                        <a href="ad.php?id=<?= $item['id'] ?>"
-                                                            class="btn btn-info shadow btn-sm sharp ms-1">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button type="button" class="btn btn-danger light sharp"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="fas fa-pencil-alt">
-
-                                                            </i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <?php
-                                                                if ($item['status'] == "active") {
-                                                                ?>
-                                                            <a class="dropdown-item"
-                                                                href="api/ads/update.php?status=inactive&id=<?= $item['id'] ?>"
-                                                                onclick="return confirm('هل أنت متأكد من تعطيل الإعلان')"
-                                                                class="btn btn-danger">
-                                                                تعطيل الإعلان
-                                                            </a>
-                                                            <?php
-
-                                                                } else {
-                                                                ?>
-                                                            <a class="dropdown-item"
-                                                                href="api/ads/update.php?status=active&id=<?= $item['id'] ?>"
-                                                                onclick="return confirm('هل أنت متأكد من تفعيل الإعلان?')"
-                                                                class="btn btn-primary">
-                                                                تفعيل
-                                                            </a>
-                                                            <?php
-
-                                                                }
-                                                                ?>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <div>
                                                     </td>
-                                            </tr>
+                                                    <td><?php echo $item['address'] ?></td>
+                                                    <td><?php echo $item['created_at'] ?></td>
+                                                    <td>
+                                                        <div class="d-flex">
+
+
+                                                            <a href="api/ads/delete.php?&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من حذف الإعلان')" class="btn btn-danger shadow btn-sm sharp ms-1">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+
+                                                            <a href="ad.php?id=<?= $item['id'] ?>" class="btn btn-info shadow btn-sm sharp ms-1">
+                                                                <i class="fa fa-eye"></i>
+                                                            </a>
+
+                                                            <div class="dropdown">
+                                                                <button type="button" class="btn btn-danger light sharp" data-bs-toggle="dropdown">
+                                                                    <i class="fas fa-pencil-alt">
+
+                                                                    </i>
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <?php
+                                                                    if ($item['status'] == "active") {
+                                                                    ?>
+                                                                        <a class="dropdown-item" href="api/ads/update.php?status=inactive&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من تعطيل الإعلان')" class="btn btn-danger">
+                                                                            تعطيل الإعلان
+                                                                        </a>
+                                                                    <?php
+
+                                                                    } else {
+                                                                    ?>
+                                                                        <a class="dropdown-item" href="api/ads/update.php?status=active&id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من تفعيل الإعلان?')" class="btn btn-primary">
+                                                                            تفعيل
+                                                                        </a>
+                                                                    <?php
+
+                                                                    }
+                                                                    ?>
+                                                                </div>
+                                                            </div>
+                                                    </td>
+
+                                                </tr>
                                             <?php
                                             }
                                             ?>

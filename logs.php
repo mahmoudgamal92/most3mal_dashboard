@@ -1,7 +1,7 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-$id = $_GET['id'];
+//$id = $_GET['id'];
 $logs = _Read('logs');
 
 ?>

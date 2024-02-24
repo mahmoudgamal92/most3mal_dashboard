@@ -1,26 +1,6 @@
 <?php
 require_once 'utils/network.php';
 require_once 'utils/config.php';
-
-function getValueByKey($key)
-{
-    include './dbcontext/connect.php';
-
-    $key = $con->real_escape_string($key);
-
-    $sql = "SELECT val FROM setting WHERE ob_key = '$key'";
-    $result = $con->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        return $row['val'];
-    } else {
-        return null; // Return null if the key is not found
-    }
-}
-
-
-
 ?>
 
 <?php include 'include/headTag.php'; ?>

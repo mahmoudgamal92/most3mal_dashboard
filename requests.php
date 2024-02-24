@@ -3,7 +3,6 @@ require_once 'utils/network.php';
 require_once 'utils/config.php';
 $requests = _Read('item_offers');
 ?>
-
 <?php include 'include/headTag.php'; ?>
 
 <body>
@@ -43,7 +42,30 @@ $requests = _Read('item_offers');
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">عمليات الشراء</h4>
+                                <div class="col-md-6">
+                                    <h4 class="card-title">
+                                        عليات الشراء
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+
+
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" href="export.php?tableName=item_offers">
+                                                تصدير CSV
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="btn btn-info" onclick="window.reload()">
+                                                تحديث
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -72,7 +94,7 @@ $requests = _Read('item_offers');
 
                                                     <td><?php echo $item['amount'] ?></td>
                                                     <td>
-                                                        <span class="badge light badge-success">
+                                                        <span class="<?= getBadge($item['status']) ?>">
                                                             <?php echo $item['status'] ?>
                                                         </span>
                                                     </td>
@@ -81,7 +103,7 @@ $requests = _Read('item_offers');
 
                                                     <td><?php echo $item['created_at'] ?></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                        <a href="request.php?id=<?= $item['id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
                                                             <i class="fas fa-eye"></i>
                                                         </a>
                                                     </td>

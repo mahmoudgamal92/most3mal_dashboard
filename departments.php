@@ -42,12 +42,33 @@ $departs = _Read('departments');
                         <div class="card">
 
                             <div class="card-header">
-                                <h4 class="card-title">
-                                    الأقسام الرئيسية
-                                </h4>
-                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
-                                    إضافة قسم
-                                </a>
+                                <div class="col-md-6">
+                                    <h4 class="card-title">
+                                        الأقسام الرئيسية
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                                إضافة
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" href="export.php?tableName=departments">
+                                                تصدير CSV
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="btn btn-info" onclick="window.reload()">
+                                                تحديث
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="modal fade" id="basicModal">

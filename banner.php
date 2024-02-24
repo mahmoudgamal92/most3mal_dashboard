@@ -68,14 +68,12 @@ $banner = _Read('banners');
                                             <div class="basic-form">
 
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control input-default "
-                                                        name="name_ar" placeholder="الأسم بالعربية">
+                                                    <input type="text" class="form-control input-default " name="name_ar" placeholder="الأسم بالعربية">
                                                 </div>
 
 
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control input-default" name="name_en"
-                                                        placeholder="الأسم بالإنجليزية">
+                                                    <input type="text" class="form-control input-default" name="name_en" placeholder="الأسم بالإنجليزية">
 
                                                 </div>
                                                 <p>
@@ -83,8 +81,7 @@ $banner = _Read('banners');
                                                 </p>
                                                 <div class="input-group custom_file_input">
                                                     <div class="form-file">
-                                                        <input type="file" name="image"
-                                                            class="form-file-input form-control">
+                                                        <input type="file" name="image" class="form-file-input form-control">
                                                     </div>
                                                 </div>
 
@@ -94,8 +91,7 @@ $banner = _Read('banners');
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger light"
-                                    data-bs-dismiss="modal">إغلاق</button>
+                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
                                 <button type="submit" class="btn btn-primary">
                                     حفظ التغيرات
                                 </button>
@@ -112,12 +108,38 @@ $banner = _Read('banners');
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">البانر الإعلاني</h4>
 
-                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
-                                    إضافة بانر
-                                </a>
+
+                            <div class="card-header">
+                                <div class="col-md-6">
+                                    <h4 class="card-title">
+                                        البانر الإعلاني
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+
+
+                                        <div class="col-md-4">
+                                            <a class="btn btn-primary" href="export.php?tableName=users">
+                                                تصدير CSV
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class="btn btn-info" onclick="window.reload()">
+                                                تحديث
+                                            </a>
+                                        </div>
+
+                                        <div class="col-md-4">
+
+                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                                إضافة بانر
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
@@ -139,32 +161,29 @@ $banner = _Read('banners');
                                             <?php
                                             foreach ($banner as $item) {
                                             ?>
-                                            <tr>
-                                                <td><?php echo $item['id'] ?></td>
-                                                <td>
-                                                    <img src="uploads/<?= $item['image'] ?>"
-                                                        style="width:50px;height:50px" />
-                                                </td>
-                                                <td>
-                                                    <?php
+                                                <tr>
+                                                    <td><?php echo $item['id'] ?></td>
+                                                    <td>
+                                                        <img src="uploads/<?= $item['image'] ?>" style="width:50px;height:50px" />
+                                                    </td>
+                                                    <td>
+                                                        <?php
                                                         $obj = json_decode($item['name'], true);
                                                         echo $obj['ar'];
                                                         ?>
-                                                </td>
-                                                <td>
-                                                    <span class="badge light badge-success">
-                                                        <?php echo $item['status'] ?>
-                                                    </span>
-                                                </td>
-                                                <td><?php echo $item['created_at'] ?></td>
-                                                <td>
-                                                    <a href="api/banner/delete.php?id=<?= $item['id'] ?>"
-                                                        onclick="return confirm('هل أنت متأكد من حذف  البانر')"
-                                                        class="btn btn-primary shadow btn-sm sharp ms-1">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge light badge-success">
+                                                            <?php echo $item['status'] ?>
+                                                        </span>
+                                                    </td>
+                                                    <td><?php echo $item['created_at'] ?></td>
+                                                    <td>
+                                                        <a href="api/banner/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('هل أنت متأكد من حذف  البانر')" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                             <?php
                                             }
                                             ?>

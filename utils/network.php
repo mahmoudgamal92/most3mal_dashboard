@@ -7,19 +7,13 @@ if (!isset($_SESSION['name'])) {
     header("Location: " . SIGNIN_URL);
 }
 
-// Function to select rows from a table based on arguments
+
 function _Read($tableName, $arguments = array())
 {
-    // Database connection parameters
-
     try {
-        // Create a PDO instance
         $pdo = new PDO(CONNECTION_STRING, DB_USER, DB_PASSWORD);
-
-        // Build the SQL query
         $sql = "SELECT * FROM $tableName";
 
-        // Add WHERE conditions based on arguments, if provided
         if (!empty($arguments)) {
             $conditions = array();
             foreach ($arguments as $column => $value) {
@@ -28,53 +22,65 @@ function _Read($tableName, $arguments = array())
             $sql .= " WHERE " . implode(" AND ", $conditions);
         }
 
-        // Prepare and execute the query
         $stmt = $pdo->prepare($sql);
         $stmt->execute($arguments);
 
-        // Fetch all rows
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Close the connection
         $pdo = null;
-
         return $rows;
     } catch (PDOException $e) {
-        // Handle any database connection errors
         echo "Connection failed: " . $e->getMessage();
     }
 }
 
-
-
-// Function to insert a row into a table
 function insertIntoTable($tableName, $data)
 {
-    // Database connection parameters
-    $dsn = 'mysql:host=localhost;dbname=your_database_name';
-    $username = 'your_username';
-    $password = 'your_password';
-
     try {
-        // Create a PDO instance
-        $pdo = new PDO($dsn, $username, $password);
-
-        // Build the SQL query
+        $pdo = new PDO(CONNECTION_STRING, DB_USER, DB_PASSWORD);
         $columns = implode(', ', array_keys($data));
         $values = ':' . implode(', :', array_keys($data));
         $sql = "INSERT INTO $tableName ($columns) VALUES ($values)";
-
-        // Prepare and execute the query
         $stmt = $pdo->prepare($sql);
         $stmt->execute($data);
-
-        // Close the connection
         $pdo = null;
 
-        return true; // Return true on success
+        return true;
     } catch (PDOException $e) {
-        // Handle any database connection errors
         echo "Connection failed: " . $e->getMessage();
-        return false; // Return false on failure
+        return false;
+    }
+}
+
+
+function getValueByKey($key)
+{
+    $pdo = new PDO(CONNECTION_STRING, DB_USER, DB_PASSWORD);
+    $sql = "SELECT val FROM setting WHERE ob_key = :key";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':key', $key, PDO::PARAM_STR);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($row !== false) {
+        return $row['val'];
+    } else {
+        return null;
+    }
+}
+
+function getBadge($status)
+{
+    switch ($status) {
+        case "active":
+            return "badge badge-success";
+        case "waiting":
+            return "badge badge-success";
+        case "cancelled":
+            return "badge badge-danger";
+        case "onhold":
+            return "badge badge-danger";
+        case "pending":
+            return "badge badge-warning";
+        default:
+            return "badge badge-info";
     }
 }
