@@ -115,13 +115,13 @@ $payment = _Read('item_offers', array('id' => (int)$id))
                                     <table id="example4" class="display" style="min-width: 845px">
                                         <tr>
                                             <th>الترتيب</th>
-                                            <th> <?php echo $payment[0]['payment_id']; ?></th>
+                                            <th> <?php echo $payment[0]['id']; ?></th>
 
                                         </tr>
 
                                         <tr>
-                                            <th>معرف العملية</th>
-                                            <th> <?php echo $payment[0]['payment_token']; ?></th>
+                                            <th>المشتري</th>
+                                            <th> <?php echo $payment[0]['user_id']; ?></th>
 
                                         </tr>
 
@@ -132,34 +132,34 @@ $payment = _Read('item_offers', array('id' => (int)$id))
 
 
                                         <tr>
-                                            <th>نوع العملية </th>
-                                            <th> <?php echo $payment[0]['payment_type']; ?></th>
+                                            <th>المنتج </th>
+                                            <th> <?php echo $payment[0]['item_id']; ?></th>
 
                                         </tr>
 
                                         <tr>
                                             <th>حالة العملية </th>
-                                            <th> <?php echo $payment[0]['payment_status']; ?></th>
+                                            <th> <?php echo $payment[0]['status']; ?></th>
 
-                                            <th>
+                                            <!-- <th>
                                                 <?php
-                                                if ($payment[0]['payment_type'] == 'withdraw') {
+                                                //if ($payment[0]['payment_type'] == 'withdraw') {
                                                 ?>
                                                     <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
                                                         تعديل
                                                     </a>
                                                 <?php
-                                                }
+                                                //  }
                                                 ?>
-                                            </th>
+                                            </th> -->
 
                                         </tr>
-
+                                        <!-- 
                                         <tr>
                                             <th>بوابة الدفع</th>
                                             <th> <?php echo $payment[0]['payment_gateway']; ?></th>
 
-                                        </tr>
+                                        </tr> -->
 
                                         <tr>
                                             <th>تاريخ العملية</th>
@@ -167,6 +167,12 @@ $payment = _Read('item_offers', array('id' => (int)$id))
 
                                         </tr>
 
+
+                                        <tr>
+                                            <th>التقييم</th>
+                                            <th> <?php echo $payment[0]['rating']; ?></th>
+
+                                        </tr>
                                         <tr>
                                             <th>العميل</th>
                                             <th> <?php echo $payment[0]['user_id']; ?></th>

@@ -126,7 +126,7 @@ $roles = _Read('roles');
                                     إضافة موظف
                                 </a>
                                 <a class="btn btn-primary" href="export.php?tableName=employees">
-                                    Excel
+                                    تصدير csv
                                 </a>
 
                             </div>

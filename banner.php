@@ -117,27 +117,33 @@ $banner = _Read('banners');
                                     </h4>
                                 </div>
 
-                                <div class="col-md-6">
+
+
+
+
+                                <div class="col-sm-12 col-md-6">
                                     <div class="row">
 
+                                        <div class="col-md-4">
+                                            <a data-bs-toggle="modal" data-bs-target="#basicModal" class="btn btn-md btn-secondary">
+                                                إضافة
+                                                <i class="fas fa-plus"></i>
+                                            </a>
+                                        </div>
 
                                         <div class="col-md-4">
-                                            <a class="btn btn-primary" href="export.php?tableName=users">
+                                            <a class="btn btn-md btn-primary" href="export.php?tableName=banners">
                                                 تصدير CSV
+                                                <i class="fas fa-print"></i>
                                             </a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a class="btn btn-info" onclick="window.reload()">
+                                            <a class="btn btn-md btn-success" onclick="location.reload()">
                                                 تحديث
+                                                <i class="fas fa-sync"></i>
                                             </a>
                                         </div>
 
-                                        <div class="col-md-4">
-
-                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
-                                                إضافة بانر
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

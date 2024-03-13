@@ -44,7 +44,7 @@ $requests = _Read('item_offers');
                             <div class="card-header">
                                 <div class="col-md-6">
                                     <h4 class="card-title">
-                                        عليات الشراء
+                                        الصفقات
                                     </h4>
                                 </div>
 

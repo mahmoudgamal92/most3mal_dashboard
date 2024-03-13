@@ -1,11 +1,10 @@
 <?php
 
-require __DIR__. '/../utils/config.php';
+require __DIR__ . '/../utils/config.php';
 $DB_HOST = "localhost";
-$DB_USER = "mestamal_root";
-$DB_PASSWORD = "AU+PFln,auzD";
-$DB_DATABASE = "mestamal_new";
-
+$DB_USER = "root";
+$DB_PASSWORD = "";
+$DB_DATABASE = "most3mal";
 // Create a connection
 $con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 

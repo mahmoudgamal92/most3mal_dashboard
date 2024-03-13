@@ -40,7 +40,6 @@ function exportTableToExcel($tableName, $data)
 if (isset($_GET['tableName'])) {
     // Get the table name from the URL parameter
     $tableName = $_GET['tableName'];
-
     // Database connection parameters
     $host = 'localhost';
     $dbname = 'most3mal';

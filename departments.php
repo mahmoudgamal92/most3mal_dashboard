@@ -47,23 +47,26 @@ $departs = _Read('departments');
                                         الأقسام الرئيسية
                                     </h4>
                                 </div>
-
-                                <div class="col-md-6">
+                                <div class="col-sm-12 col-md-6">
                                     <div class="row">
+
                                         <div class="col-md-4">
-                                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                                            <a data-bs-toggle="modal" data-bs-target="#basicModal" class="btn btn-md btn-secondary">
                                                 إضافة
+                                                <i class="fas fa-plus"></i>
                                             </a>
                                         </div>
 
                                         <div class="col-md-4">
-                                            <a class="btn btn-primary" href="export.php?tableName=departments">
+                                            <a class="btn btn-md btn-primary" href="export.php?tableName=departments">
                                                 تصدير CSV
+                                                <i class="fas fa-print"></i>
                                             </a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a class="btn btn-info" onclick="window.reload()">
+                                            <a class="btn btn-md btn-success" onclick="location.reload()">
                                                 تحديث
+                                                <i class="fas fa-sync"></i>
                                             </a>
                                         </div>
 
@@ -199,7 +202,6 @@ $departs = _Read('departments');
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <?php
                                             foreach ($departs as $item) {
                                             ?>
@@ -210,8 +212,7 @@ $departs = _Read('departments');
                                                     <td><?php echo $item['id'] ?></td>
                                                     <td>
                                                         <?php
-                                                        $obj = json_decode($item['name'], true);
-                                                        echo $obj['ar'];
+                                                        echo  $item['name_ar'];
                                                         ?>
                                                     </td>
                                                     <td>
@@ -223,7 +224,7 @@ $departs = _Read('departments');
                                                     <td>
                                                         <div class="d-flex">
 
-                                                            <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <a href="department.php?id=<?= $item['id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
                                                                 <i class="fas fa-pencil-alt"></i>
                                                             </a>
 

@@ -4,6 +4,7 @@ require_once 'utils/config.php';
 ?>
 
 <?php include 'include/headTag.php'; ?>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.2.0/classic/ckeditor.js"></script>
 
 <body>
     <!--********* Preloader start ******-->
@@ -179,21 +180,183 @@ require_once 'utils/config.php';
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    سياسة الإستخدام و الخصوصية
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form method="post" action="./api/settings/index.php">
+                                        <h5>
+                                            العربية
+                                        </h5>
+                                        <textarea id="privacy_ar" class="form-control form-control-lg">
+                                        <?php echo getValueByKey('privacy_ar'); ?>
+                                        </textarea>
+
+                                        <h5>
+                                            الإنجليزية
+                                        </h5>
+                                        <textarea id="privacy_en" class="form-control form-control-lg">
+                                            <?php echo getValueByKey('privacy_en'); ?>
+                                        </textarea>
+                                </div>
+                                <div class="mb-3 row">
+                                    <button class="btn btn-primary" style="margin-top: 50px;" type="submit">
+                                        تعديل
+                                    </button>
+                                </div>
+                                </form>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                الشروط و الأحكام
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form method="post" action="./api/settings/index.php">
+                                    <h5>
+                                        العربية
+                                    </h5>
+                                    <textarea name="settings[terms_ar]" id="terms_ar" class=" form-control form-control-lg">
+                                    <?php echo getValueByKey('terms_ar'); ?>
+                                    </textarea>
+                                    <h5>
+                                        الإنجليزية
+                                    </h5>
+                                    <textarea name="settings[terms_en]" id="terms_en" class=" form-control form-control-lg">
+                                    <?php echo getValueByKey('terms_en'); ?>
+                                    </textarea>
+                                    <div class="mb-3 row">
+                                        <button class="btn btn-primary" style="margin-top: 50px;" type="submit">
+                                            حفظ
+                                        </button>
+                                    </div>
+                                </form>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                كيف يعمل التطبيق
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form method="post" action="./api/settings/index.php">
+                                    <h5>
+                                        العربية
+                                    </h5>
+                                    <textarea name="settings[how_works_ar]" id="how_works_ar" class="form-control form-control-lg">
+                                            <?php echo getValueByKey('how_works_ar') ?>
+                                        </textarea>
+                                    <h5>
+                                        الإنجليزية
+                                    </h5>
+                                    <textarea name="settings[how_works_en]" id="how_works_en" class="form-control form-control-lg">
+                                            <?php echo getValueByKey('how_works_en') ?>
+                                        </textarea>
+                                    <div class="mb-3 row">
+                                        <button class="btn btn-primary" style="margin-top: 50px;" type="submit">
+                                            تعديل
+                                        </button>
+                                    </div>
+                                </form>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <!--*****  Content body end  ***-->
 
-        <!--******* Footer start ***-->
-        <?php include 'include/footer.php' ?>
-        <!--*******   Footer end   *****-->
+    </div>
+    <!--*****  Content body end  ***-->
+
+    <!--******* Footer start ***-->
+    <?php include 'include/footer.php' ?>
+    <!--*******   Footer end   *****-->
 
 
     </div>
     <!--***** Main wrapper end ***-->
 
     <!--******* Scripts ******-->
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#privacy_ar'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#privacy_en'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#terms_ar'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#terms_en'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+
+        ClassicEditor
+            .create(document.querySelector('#how_works_ar'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        ClassicEditor
+            .create(document.querySelector('#how_works_en'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
     <?php include 'include/scripts.php' ?>
 </body>
 

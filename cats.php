@@ -139,7 +139,7 @@ $cats = _Read('categories', $params);
                                                     <td>
                                                         <div class="d-flex">
 
-                                                            <a href="#" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <a href="cat.php?id=<?= $item['id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
                                                                 <i class="fas fa-pencil-alt"></i>
                                                             </a>
 

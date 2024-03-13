@@ -2,7 +2,8 @@
 require_once 'utils/network.php';
 require_once 'utils/config.php';
 $id = $_GET['id'];
-$ad = json_decode(CURL_GET(API_URL . 'records/ads/' . $id), true);
+// $ad = json_decode(CURL_GET(API_URL . 'records/ads/' . $id), true);
+// $ads = _Read('ads');
 ?>
 
 <?php include 'include/headTag.php'; ?>
