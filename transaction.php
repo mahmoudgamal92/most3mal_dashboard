@@ -42,7 +42,7 @@ $payment = _Read('payment_process', array('payment_id' => (int)$id));
             <div class="modal fade" id="basicModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <form method="post" action="api/transactios/update.php" enctype="multipart/form-data">
+                        <form method="post" action="api/transactions/update.php" enctype="multipart/form-data">
                             <div class="modal-header">
                                 <h5 class="modal-title">إضافة بانر جدبد</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal">
@@ -58,13 +58,12 @@ $payment = _Read('payment_process', array('payment_id' => (int)$id));
                                         </div>
                                         <div class="card-body">
                                             <div class="basic-form">
-
+                                                <input type="hidden" name="transaction_id" value="<?= $id ?>">
                                                 <div class="mb-3">
-                                                    <input type="text" class="form-control input-default " 
-                                                    name="transaction_id" placeholder="معرف العملية">
+                                                    <input type="text" class="form-control input-default " name="transaction_token" placeholder="معرف العملية">
                                                 </div>
 
-                                                <select name="payment_status" class="default-select form-control wide mt-3">
+                                                <select name="transaction_status" class="default-select form-control wide mt-3">
 
                                                     <option value="done">
                                                         إتمام العملية
@@ -80,7 +79,7 @@ $payment = _Read('payment_process', array('payment_id' => (int)$id));
                                                 <p>
                                                     إختر المرفقات
                                                 </p>
-                                                
+
                                                 <div class="input-group custom_file_input">
                                                     <div class="form-file">
                                                         <input type="file" name="image" class="form-file-input form-control">
@@ -144,7 +143,9 @@ $payment = _Read('payment_process', array('payment_id' => (int)$id));
 
                                         <tr>
                                             <th>حالة العملية </th>
-                                            <th> <?php echo $payment[0]['payment_status']; ?></th>
+                                            <th>
+                                                <?php echo getBadge($payment[0]['payment_status']) ?>
+                                            </th>
 
                                             <th>
                                                 <?php

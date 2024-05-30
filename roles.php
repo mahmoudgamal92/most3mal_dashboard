@@ -78,22 +78,17 @@ $roles = _Read('roles');
 
 
                                                                 <div class="mb-3">
-                                                                    <input type="text"
-                                                                        class="form-control input-default" name="title"
-                                                                        placeholder="المسمي الوظيفي">
+                                                                    <input type="text" class="form-control input-default" name="title" placeholder="المسمي الوظيفي">
                                                                 </div>
 
                                                                 <div class="mb-3">
-                                                                    <input type="text"
-                                                                        class="form-control input-default" name="name"
-                                                                        placeholder="المعرف البرمجي">
+                                                                    <input type="text" class="form-control input-default" name="name" placeholder="المعرف البرمجي">
                                                                 </div>
                                                                 <p>
                                                                     إختر الأقسام المتاحة للمستخدم
                                                                 </p>
 
-                                                                <select name="roles[]" multiple
-                                                                    class="default-select form-control wide mt-3">
+                                                                <select name="roles[]" multiple class="default-select form-control wide mt-3">
 
                                                                     <option value="users">
                                                                         المستخدمين
@@ -118,6 +113,10 @@ $roles = _Read('roles');
                                                                     <option value="managment">
                                                                         قسم الإدارة
                                                                     </option>
+
+                                                                    <option value="support">
+                                                                        الدعم الفني
+                                                                    </option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -125,8 +124,7 @@ $roles = _Read('roles');
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger light"
-                                                    data-bs-dismiss="modal">إغلاق</button>
+                                                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">إغلاق</button>
                                                 <button type="submit" class="btn btn-primary">
                                                     حفظ التغيرات
                                                 </button>
@@ -157,19 +155,19 @@ $roles = _Read('roles');
                                             <?php
                                             foreach ($roles as $item) {
                                             ?>
-                                            <tr>
-                                                <td><?php echo $item['id'] ?></td>
-                                                <td><?php echo $item['title'] ?></td>
-                                                <td><?php echo $item['name'] ?></td>
-                                                <td><?php echo $item['role'] ?></td>
-                                                <td><?php echo $item['status'] ?></td>
-                                                <td><?php echo $item['created_at'] ?></td>
-                                                <td>
-                                                    <a href="edit_role.php?id=<?=$item['id']?>" class="btn btn-primary shadow btn-sm sharp ms-1">
-                                                        <i class="fas fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td><?php echo $item['id'] ?></td>
+                                                    <td><?php echo $item['title'] ?></td>
+                                                    <td><?php echo $item['name'] ?></td>
+                                                    <td><?php echo $item['role'] ?></td>
+                                                    <td><?php echo $item['status'] ?></td>
+                                                    <td><?php echo $item['created_at'] ?></td>
+                                                    <td>
+                                                        <a href="edit_role.php?id=<?= $item['id'] ?>" class="btn btn-primary shadow btn-sm sharp ms-1">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                             <?php
                                             }
                                             ?>

@@ -122,13 +122,19 @@
             <?php
             }
             ?>
-            <li>
-                <a class="has-arrow ai-icon" href="support.php" aria-expanded="false">
-                    <i class="flaticon-381-television"></i>
-                    <span class="nav-text">الدعم الفني</span>
-                </a>
-            </li>
 
+            <?php
+            if (str_contains($user_selected_roles, 'support')) {
+            ?>
+                <li>
+                    <a class="has-arrow ai-icon" href="support.php" aria-expanded="false">
+                        <i class="flaticon-381-television"></i>
+                        <span class="nav-text">الدعم الفني</span>
+                    </a>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
 
         <div class="copyright">

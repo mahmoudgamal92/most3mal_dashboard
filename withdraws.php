@@ -101,9 +101,9 @@ $withdraws = _Read('payment_process', $params);
                                                     <td><?php echo $item['payment_gateway'] ?></td>
 
                                                     <td>
-                                                        <span class="badge light badge-success">
-                                                            <?php echo $item['payment_status'] ?>
-                                                        </span>
+
+                                                        <?php echo getBadge($item['payment_status']) ?>
+
                                                     </td>
                                                     <td>
                                                         <?php echo $item['amount'] ?>

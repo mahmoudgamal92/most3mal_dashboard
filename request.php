@@ -120,40 +120,40 @@ $payment = _Read('item_offers', array('id' => (int)$id))
                                         <tr>
                                             <th>الترتيب</th>
                                             <th> <?php echo $payment[0]['id']; ?></th>
-
                                         </tr>
-
                                         <tr>
                                             <th>المشتري</th>
-                                            <th> <?php echo $payment[0]['user_id']; ?></th>
+                                            <th>
+                                                <?php echo getUserById($payment[0]['user_id'])['name'] ?>
+                                            </th>
 
                                         </tr>
 
                                         <tr>
                                             <th>القيمة</th>
-                                            <th> <?php echo $payment[0]['amount']; ?></th>
+                                            <th>
+                                                <?php echo $payment[0]['amount'] . " ريال سعودي "; ?>
+                                            </th>
                                         </tr>
 
 
-                                        <!--<tr>-->
-                                        <!--    <th>المنتج </th>-->
-                                        <!--    <th> <?php echo $payment[0]['item_id']; ?></th>-->
-
-                                        <!--</tr>-->
+                                        <tr>
+                                            <th>المنتج </th>
+                                            <th>
+                                                <a class="btn btn-primary" href="ad.php?id=<?= $payment[0]['item_id'] ?>">
+                                                    عرض المنتج
+                                                </a>
+                                            </th>
 
                                         <tr>
                                             <th>حالة العملية </th>
-                                            <th> <?php echo $payment[0]['status']; ?></th>
+                                            <th>
+                                                <?php echo getBadge($payment[0]['status']) ?>
+                                            </th>
 
-                                          
+
 
                                         </tr>
-                                        <!-- 
-                                        <tr>
-                                            <th>بوابة الدفع</th>
-                                            <th> <?php echo $payment[0]['payment_gateway']; ?></th>
-
-                                        </tr> -->
 
                                         <tr>
                                             <th>تاريخ العملية</th>
@@ -163,21 +163,10 @@ $payment = _Read('item_offers', array('id' => (int)$id))
 
 
                                         <tr>
-                                            <th>التقييم</th>
+                                            <th>تقييم المنتج</th>
                                             <th> <?php echo $payment[0]['rating_val']; ?></th>
 
                                         </tr>
-                                        <tr>
-                                            <th>العميل</th>
-                                            <th> <?php echo $payment[0]['item_id']; ?></th>
-                                            <th>
-                                                <a class="btn btn-primary" href="transactions.php?id=<?= $payment[0]['user_id'] ?>">
-                                                    سجل المعاملات
-                                                </a>
-                                            </th>
-                                        </tr>
-
-                                        <p></p>
                                 </div>
                             </div>
                         </div>

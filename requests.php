@@ -90,7 +90,7 @@ $requests = _Read('item_offers');
                                                 <tr>
                                                     <td><?php echo $item['id'] ?></td>
                                                     <td><?php echo $item['item_id'] ?></td>
-                                                    <td><?php echo $item['user_id'] ?></td>
+                                                    <td><?php echo getUserById($item['user_id'])['name'] ?></td>
                                                     <td><?php echo $item['amount'] ?></td>
                                                     <td>
                                                         <?php echo getBadge($item['status']) ?>

@@ -89,7 +89,7 @@ if (!isset($_SESSION['name'])) {
         if ($row !== false) {
             return $row;
         } else {
-            return null;
+            return array("name" => "مستخدم غير موجود");
         }
     }
 
