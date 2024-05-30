@@ -1,0 +1,23 @@
+[19-Sep-2023 11:19:47 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_erorr() in /home4/mestamal/public_html/mahmoud/payment/success.php:15
+Stack trace:
+#0 {main}
+  thrown in /home4/mestamal/public_html/mahmoud/payment/success.php on line 15
+[14-Mar-2024 02:25:36 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:26:01 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:26:21 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:26:37 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:26:56 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:27:08 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:27:10 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:28:03 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:28:32 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:28:49 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:29:01 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:29:11 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:29:40 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:29:44 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:29:58 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:30:22 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:40:10 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:50:19 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14
+[14-Mar-2024 02:51:54 America/Boise] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mestamal/public_html/dashboard/api_mobile/api/custom/payment/banks.php on line 14

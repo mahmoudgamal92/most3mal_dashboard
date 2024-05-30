@@ -1,0 +1,4 @@
+[13-Mar-2024 14:55:46 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/ads/delete.php on line 15
+[14-Mar-2024 05:21:24 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/ads/delete.php on line 16
+[14-Mar-2024 05:24:07 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/ads/delete.php on line 15
+[14-Mar-2024 05:25:06 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/ads/delete.php on line 14

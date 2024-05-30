@@ -1,0 +1,14 @@
+[26-Feb-2024 15:16:32 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[04-Mar-2024 22:14:20 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[06-May-2024 13:12:35 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function logAction() in /home4/mestamal/public_html/dashboard/api/auctions/delete.php:8
+Stack trace:
+#0 {main}
+  thrown in /home4/mestamal/public_html/dashboard/api/auctions/delete.php on line 8
+[06-May-2024 13:13:02 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/auctions/delete.php on line 15
+[06-May-2024 13:13:46 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/auctions/delete.php on line 15
+[06-May-2024 13:15:19 America/Boise] PHP Warning:  mysqli_close(): Couldn't fetch mysqli in /home4/mestamal/public_html/dashboard/api/auctions/delete.php on line 16
+[24-May-2024 20:55:26 America/Chicago] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home3/user315325/most3mal.bnookholding.com/api/auctions/delete.php:15
+Stack trace:
+#0 /home3/user315325/most3mal.bnookholding.com/api/auctions/delete.php(15): mysqli_close(Object(mysqli))
+#1 {main}
+  thrown in /home3/user315325/most3mal.bnookholding.com/api/auctions/delete.php on line 15

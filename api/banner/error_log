@@ -1,0 +1,9 @@
+[13-Mar-2024 13:02:55 America/Boise] PHP Warning:  move_uploaded_file(./../../uploads/banner/66318043-0-image-a-21_1673171418861-1.jpg): failed to open stream: No such file or directory in /home4/mestamal/public_html/dashboard/api/banner/insert.php on line 12
+[13-Mar-2024 13:02:55 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php2KX8Mx' to './../../uploads/banner/66318043-0-image-a-21_1673171418861-1.jpg' in /home4/mestamal/public_html/dashboard/api/banner/insert.php on line 12
+[24-May-2024 20:32:01 America/Chicago] PHP Warning:  Undefined array key "name_en" in /home3/user315325/most3mal.bnookholding.com/api/banner/insert.php on line 4
+[24-May-2024 20:33:18 America/Chicago] PHP Warning:  Undefined array key "name_en" in /home3/user315325/most3mal.bnookholding.com/api/banner/insert.php on line 4
+[24-May-2024 20:33:31 America/Chicago] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home3/user315325/most3mal.bnookholding.com/api/banner/delete.php:15
+Stack trace:
+#0 /home3/user315325/most3mal.bnookholding.com/api/banner/delete.php(15): mysqli_close(Object(mysqli))
+#1 {main}
+  thrown in /home3/user315325/most3mal.bnookholding.com/api/banner/delete.php on line 15

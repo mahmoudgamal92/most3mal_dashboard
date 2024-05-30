@@ -1,0 +1,18 @@
+
+Domains:	
+autodiscover.wdapp.sa
+cpanel.wdapp.sa
+cpcalendars.wdapp.sa
+cpcontacts.wdapp.sa
+dashboard.zawya.sa
+mail.wdapp.sa
+wdapp.sa
+webdisk.wdapp.sa
+webmail.wdapp.sa
+website-1f8dd23a.zawya.sa
+www.dashboard.zawya.sa
+www.wdapp.sa
+www.website-1f8dd23a.zawya.sa
+Issuer:	Let's Encrypt
+Key:	RSA, 2,048-bit (98ae7e9c …)
+Expiration:	Mar 30, 2024 12:49:46 AM

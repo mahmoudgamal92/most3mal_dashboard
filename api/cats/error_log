@@ -1,0 +1,7 @@
+[24-Feb-2024 20:56:39 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[24-Feb-2024 20:57:49 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[26-Feb-2024 15:12:48 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[26-Feb-2024 15:13:29 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[26-Feb-2024 15:13:52 America/Boise] PHP Warning:  Use of undefined constant flase - assumed 'flase' (this will throw an Error in a future version of PHP) in /home4/mestamal/public_html/dashboard/utils/config.php on line 21
+[24-May-2024 20:11:11 America/Chicago] PHP Warning:  Undefined array key "status" in /home3/user315325/most3mal.bnookholding.com/api/cats/update.php on line 7
+[24-May-2024 20:11:20 America/Chicago] PHP Warning:  Undefined array key "status" in /home3/user315325/most3mal.bnookholding.com/api/cats/update.php on line 7
